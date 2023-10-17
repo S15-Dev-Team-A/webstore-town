@@ -1,0 +1,22 @@
+{
+  "name": "webtown-store",
+  "version": "1.0.0",
+  "description": "Buying items that is in Sims style that is clickable and can buy items like a mall setting. You can go to one store and the store will upload the item or the goods then you can buy it. New experience in buying items.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rowboat/mongoose-fuzzy-searching": "^2.0.3",
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "hbs": "^4.2.0",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.3.4"
+  }
+}
