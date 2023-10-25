@@ -20,7 +20,7 @@ a:hover {
 
 .navbar {
 
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 250px;
     margin: -8px;
@@ -41,17 +41,30 @@ a:hover {
     font-size:25px;
 }
 
+.mycart {
+  position: fixed;
+  height: 100px;
+  width: 250px;
+  margin: 50px;
+  bottom:0;
+  right:0;
+  background: black;
+  transition:0.3s;
+  border-radius: 5px
+}
 
-.townmap {
+.mycartText {
+  text-align:left; 
+  padding-left:27px; 
+  margin-top:28px; 
+  font-size:35px;
 
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    margin: -8px;
-    background-image:url(/images/town_placeholder.jpg); 
-    background-size: cover; 
-    background-repeat: no-repeat;
+}
 
+
+.mycart:hover {
+  cursor: pointer;
+  bottom:10px;
 }
 
 
@@ -127,3 +140,5 @@ a:hover {
     margin:5px;
     padding:10px;
 }
+
+

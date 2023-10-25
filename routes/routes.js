@@ -6,7 +6,7 @@ const express = require('express');
 const mainController = require('../controllers/mainController.js'); // For index.js (base controller)
 const loginController = require('../controllers/loginController.js');
 const registerController = require('../controllers/registerController.js');
-
+const interiorController = require('../controllers/interiorController.js');
 
 const app = express();
 
@@ -22,5 +22,6 @@ app.get('/login', loginController.getLoginPage);
 // for the /register webpage
 app.get('/register', registerController.getRegisterPage);                 
 
+app.get('/interior', interiorController.getInteriorPage);       
 
 module.exports = app;
