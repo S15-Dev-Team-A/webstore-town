@@ -1,144 +1,136 @@
 /*  Jetbrains Mono font */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /*  Whole site */
-body, textarea, button {
+body,
+textarea,
+button {
     background-color: #181a1d;
     color: aliceblue;
-    font-family: 'Rubik', monospace;
+    font-family: "Rubik", monospace;
     text-align: justify;
 }
 
-a{
-    all:unset;
+a {
+    all: unset;
 }
 
 a:hover {
     cursor: pointer;
-
 }
 
 .navbar {
-
     position: fixed;
     height: 100%;
     width: 250px;
     margin: -8px;
-    margin-left:-200px;
+    margin-left: -200px;
     background: black;
-    transition:0.3s;
-
+    transition: 0.3s;
 }
 
 .navbar:hover {
-    margin-left:-8px;
+    margin-left: -8px;
 }
 
 .navbarText {
-    text-align:left; 
-    padding-left:20px; 
-    margin-top:5px; 
-    font-size:25px;
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 5px;
+    font-size: 25px;
 }
 
 .mycart {
-  position: fixed;
-  height: 100px;
-  width: 250px;
-  margin: 50px;
-  bottom:0;
-  right:0;
-  background: black;
-  transition:0.3s;
-  border-radius: 5px
+    position: fixed;
+    height: 100px;
+    width: 250px;
+    margin: 50px;
+    bottom: 0;
+    right: 0;
+    background: black;
+    transition: 0.3s;
+    border-radius: 5px;
 }
 
 .mycartText {
-  text-align:left; 
-  padding-left:27px; 
-  margin-top:28px; 
-  font-size:35px;
-
+    text-align: left;
+    padding-left: 27px;
+    margin-top: 28px;
+    font-size: 35px;
 }
-
 
 .mycart:hover {
-  cursor: pointer;
-  bottom:10px;
+    cursor: pointer;
+    bottom: 10px;
 }
-
-
 
 /* Register / Login Page */
 .container {
-  margin: 0 auto;
-  max-width: 70%;
-  padding: 20px;
-  background-color: #181818;
-  border-radius: 5px;
-  margin-top: 0px;
+    margin: 0 auto;
+    max-width: 70%;
+    padding: 20px;
+    background-color: #181818;
+    border-radius: 5px;
+    margin-top: 0px;
 }
 
 .container input[type="click"] {
-  width: 10%;
-  background-color: #646464;
-  color: white;
-  margin: 10px 0;
-  cursor: pointer;
-  border: none;
+    width: 10%;
+    background-color: #646464;
+    color: white;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
 }
 .container h2 {
-  text-align: center;
+    text-align: center;
 }
 .container img {
-  display: block;
-  margin: 0 auto 20px;
-  max-width: 100px;
-  height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100px;
+    height: auto;
 }
 .container input[type="text"],
 .container input[type="password"] {
-  font: Verdana;
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid gray;
-  box-sizing: border-box;
+    font: Verdana;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid gray;
+    box-sizing: border-box;
 }
 .container input[type="submit"] {
-  width: 100%;
-  background-color: #9e8b22;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  cursor: pointer;
-  border: none;
-  
+    width: 100%;
+    background-color: #9e8b22;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    border: none;
 }
 
 .container input[type="submit"]:hover {
-  background-color: #b3b168;
+    background-color: #b3b168;
 }
 
 /* Horizontal flex container */
 .hori {
-    display:flex;
-    flex-direction:row;
-    align-content:flex-start;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
 }
 
 /* Vertical flex container */
 .vert {
-    display:flex;
-    flex-direction:column;
-    align-content:flex-start;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
 }
 
 /* Adds margin and padding to a flex container */
 .block {
-    margin:5px;
-    padding:10px;
+    margin: 5px;
+    padding: 10px;
 }
-
-

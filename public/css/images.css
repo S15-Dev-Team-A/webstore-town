@@ -1,44 +1,37 @@
 .kithouse {
-  position: absolute;
-  width: 10%;
-  margin-left:930px; 
-  margin-top:290px;
-  padding:0; 
-  transition:0.3s;
+    position: absolute;
+    width: 10%;
+    margin-left: 930px;
+    margin-top: 290px;
+    padding: 0;
+    transition: 0.3s;
 }
 
-
-
 .townmap {
-
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  margin: -8px;
-  background-image:url(/images/town_placeholder.jpg); 
-  background-size: cover; 
-  background-repeat: no-repeat;
-
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: -8px;
+    background-image: url(/images/town_placeholder.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .interior {
-
-  position: absolute;
-  width:800px;
-  padding:0; 
-  margin-left: 400px;
-  margin-top: 30px;
-
+    position: absolute;
+    width: 800px;
+    padding: 0;
+    margin-left: 400px;
+    margin-top: 30px;
 }
 
 .dot {
-  position: absolute;
-  width: 50px;
-  padding:0; 
-  transition:0.3s;
+    position: absolute;
+    width: 50px;
+    padding: 0;
+    transition: 0.3s;
 }
 
 .dot:hover {
-  cursor: pointer;
-
+    cursor: pointer;
 }
