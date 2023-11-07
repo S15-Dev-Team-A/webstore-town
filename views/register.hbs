@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/js/register.js" defer></script>
     <title>WebTown | Register</title>
 </head>
 {{> navbar}}
@@ -15,16 +16,29 @@
     <div class="container">
         <!-- <img src="../images/logo.png" alt="Logo"> -->
         <h2>Register</h2>
-        <form method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" maxlength="30" required>
+        <form id="registerForm" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your real name" required>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" minlength="8" maxlength="30" required>
 
-            <input type="submit" value="Register">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" minlength="8" required>
+
+            <label for="accountType">Account Type</label>
+            <br>
+            <select id="accountType" name="accountType" required>
+                <option value="Shopper">Shopper</option>
+                <option value="Affiliate">Affiliate</option>
+                <option value="Merchant">Merchant</option>
+            </select>
+
+            <input id="registerSubmit" type="button" value="Register">
+
             <p style="color:red">{{error}}</p>
-            <button><a href="/login">Already Have an Account?</a></button>
+
+            <button><a href="/login">Already have an account?</a></button>
         </form>
     </div>
 

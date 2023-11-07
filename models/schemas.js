@@ -4,18 +4,18 @@ const mongoose_fuzzy_searching = require('@rowboat/mongoose-fuzzy-searching');  
 var memberSchema = new mongoose.Schema({    // defines the schema / model for the application's user accounts called Members
     username: {                             // Used as the unique identifier (ID) for each user as well as used to login
         type: String,
-        required: true
+        trim: true,
+        required: true,
+        unique: true
     },
     pw: {
+        // hashed password
         type: String,
-        required: true
-    },
-    email: {      
-        type: String,
-        required: true
+        required: true,
     },
     displayName: {                          // Name displayed on profiles / shops
         type: String,
+        trim: true,
         required: true
     },
     dp: {                                   // Profile picture

@@ -67,7 +67,7 @@ a:hover {
 /* Register / Login Page */
 .container {
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 25%;
     padding: 20px;
     background-color: #181818;
     border-radius: 5px;
@@ -101,7 +101,7 @@ a:hover {
     border: 1px solid gray;
     box-sizing: border-box;
 }
-.container input[type="submit"] {
+.container input[type="button"] {
     width: 100%;
     background-color: #9e8b22;
     color: white;
@@ -111,7 +111,7 @@ a:hover {
     border: none;
 }
 
-.container input[type="submit"]:hover {
+.container input[type="button"]:hover {
     background-color: #b3b168;
 }
 

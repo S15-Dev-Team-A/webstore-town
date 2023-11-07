@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" meda="all" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" meda="all" href="/css/login-register.css">
     <link rel="icon" href="/images/logo.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,18 +17,18 @@
         <!-- <img src="../images/logo.png" alt="Logo"> -->
         <h2>Login</h2>
         <form id="loginForm" method="post">
-            <label for="username">Username:</label>
+            <label for="username">Username</label>
             <input type="text" id="username" name="username" placeholder="Enter your username" required>
 
-            <label for="password">Password:</label>
+            <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
-            <input type="submit" value="Login">
+            <input type="button" value="Login">
         </form>
 
         <p style="color:red">{{error}}</p>
 
-        <button onclick="/register"><a href="/register">Don't Have an Account?</a></button>
+        <button><a href="/register">Don't have an account?</a></button>
     </div>
 </body>
 

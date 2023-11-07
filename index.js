@@ -23,6 +23,9 @@ hbs.registerPartials(__dirname + '/views/partials');            // sets `/views/
 app.use(express.urlencoded({limit: '50mb', extended: true}));   // parses incoming requests with urlencoded payloads
 app.use(express.static('public'));                              // set the folder `public` as folder containing static assets such as css, js, and image files
 
+// use express.json() middleware to parse request body
+app.use(express.json());
+
 db.connect();                   // connects to the database
 app.use(session({               // use `express-session` for sessions and set its options
     'secret': 'webtown',
