@@ -101,7 +101,7 @@ a:hover {
     border: 1px solid gray;
     box-sizing: border-box;
 }
-.container input[type="button"] {
+.container input[type="submit"] {
     width: 100%;
     background-color: #9e8b22;
     color: white;
@@ -111,7 +111,7 @@ a:hover {
     border: none;
 }
 
-.container input[type="button"]:hover {
+.container input[type="submit"]:hover {
     background-color: #b3b168;
 }
 

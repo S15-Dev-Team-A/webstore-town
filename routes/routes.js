@@ -17,14 +17,16 @@ app.get("/", mainController.getHomePage); //  execute function getHome() defined
 // loginController.js functions
 // for the /login webpage
 app.get("/login", loginController.getLoginPage);
+app.post("/login", loginController.postLoginUser);
 
 // registerController.js functions
 // for the /register webpage
 app.get("/register", registerController.getRegisterPage);
+app.post("/register", registerController.postRegisterUser);
 
 app.get("/interior", interiorController.getInteriorPage);
 
-const authRouter = require("./auth");
-app.use("/api/auth", authRouter);
+// const authRouter = require("./auth");
+// app.use("/api/auth", authRouter);
 
 module.exports = app;
