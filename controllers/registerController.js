@@ -16,8 +16,7 @@ const registerController = {
         try {
             // check if username follows format
             if (!validateUsername(req.body["username"])) {
-                console.log("Username format invalid");
-                res.status(401).send("Username format invalid");
+                res.render("register", {error: "Username format is invalid."});
                 return;
             }
 
@@ -26,15 +25,13 @@ const registerController = {
                 username: req.body["username"],
             }).exec();
             if (existingUsername !== null) {
-                console.log("Username already exists");
-                res.status(401).send("Username already exists");
+                res.render("register", {error: "Username already exists."});
                 return;
             }
 
             // check if unhashed password is valid
             if (!validatePassword(req.body["password"])) {
-                console.log("Password format invalid");
-                res.status(401).send("Password format invalid");
+                res.render("register", {error: "Password format is invalid."});
                 return;
             }
 
@@ -50,9 +47,8 @@ const registerController = {
                 displayName: req.body["name"],
                 accountType: req.body["accountType"],
             }).save();
-
-            console.log("Account registration successful");
-            res.status(200).send("Account registration successful");
+            
+            res.render("home");
         } catch (e) {
             console.error(e);
         }
