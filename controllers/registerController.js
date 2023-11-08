@@ -8,15 +8,22 @@ const { Member } = require("../models/schemas");
 */
 const registerController = {
     getRegisterPage: function (req, res) {
-        // render `../views/register.hbs`
-        res.render("register"); // Refers to register.hbs
+        // prevent user from accessing register page when they are logged in
+        if (req.session.loggedIn) {
+            res.render("home");
+            return;
+        }
+
+        res.render("register");
     },
 
     postRegisterUser: async function (req, res) {
         try {
             // check if username follows format
             if (!validateUsername(req.body["username"])) {
-                res.render("register", {error: "Username format is invalid."});
+                res.render("register", {
+                    error: "Username format is invalid.",
+                });
                 return;
             }
 
@@ -25,13 +32,15 @@ const registerController = {
                 username: req.body["username"],
             }).exec();
             if (existingUsername !== null) {
-                res.render("register", {error: "Username already exists."});
+                res.render("register", { error: "Username already exists." });
                 return;
             }
 
             // check if unhashed password is valid
             if (!validatePassword(req.body["password"])) {
-                res.render("register", {error: "Password format is invalid."});
+                res.render("register", {
+                    error: "Password format is invalid.",
+                });
                 return;
             }
 
@@ -47,7 +56,7 @@ const registerController = {
                 displayName: req.body["name"],
                 accountType: req.body["accountType"],
             }).save();
-            
+
             res.render("home");
         } catch (e) {
             console.error(e);

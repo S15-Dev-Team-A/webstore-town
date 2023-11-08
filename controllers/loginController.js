@@ -8,27 +8,42 @@ const { Member } = require("../models/schemas");
 */
 const loginController = {
     getLoginPage: function (req, res) {
-        // render `../views/login.hbs`
-        res.render("login"); // Refers to login.hbs
+        // prevent user from accessing login page when they are logged in
+        if (req.session.loggedIn) {
+            res.render("home");
+            return;
+        }
+
+        res.render("login");
     },
 
     postLoginUser: async function (req, res) {
         try {
             // check if username exists and get hashed password if so, otherwise abort
-            const existingUsername = await Member.findOne({username: req.body["username"]});
+            const existingUsername = await Member.findOne({
+                username: req.body["username"],
+            });
             if (existingUsername === null) {
-                res.render("login", {error: "Incorrect username or password. Please try again."});
+                res.render("login", {
+                    error: "Incorrect username or password. Please try again.",
+                });
                 return;
             }
-    
+
             // check if hashed password in DB matches the entered password
-            const success = await bcrypt.compare(req.body["password"], existingUsername.pw);
+            const success = await bcrypt.compare(
+                req.body["password"],
+                existingUsername.pw
+            );
             if (!success) {
-                res.render("login", {error: "Incorrect username or password. Please try again."});
+                res.render("login", {
+                    error: "Incorrect username or password. Please try again.",
+                });
                 return;
             }
-    
-            console.log("Login successful to be implemented");
+
+            req.session.loggedIn = true;
+            req.session.username = existingUsername.username;
             res.render("home");
         } catch (e) {
             console.error(e);
