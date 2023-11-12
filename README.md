@@ -3,8 +3,9 @@ Buying items that is in Sims style that is clickable and can buy items like a ma
 
 ### Application usage
 1. Run `npm install` at folder (do ONLY if first time running app)
-2. Run `node index.js` at folder
-3. In terminal, click the link `http://localhost:3000` (or something similar)
+2. Run `node populate.js` at folder
+3. Run `node index.js` at folder
+4. In terminal, click the link `http://localhost:3000` (or something similar) to launch the app
 
 ### Folder usage
 - **controllers** - This folder contains files which defines callback functions for client requests. One controller for one .hbs file (one controller for one webpage)

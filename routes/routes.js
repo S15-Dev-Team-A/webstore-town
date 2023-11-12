@@ -7,6 +7,8 @@ const mainController = require("../controllers/mainController.js"); // For index
 const loginController = require("../controllers/loginController.js");
 const registerController = require("../controllers/registerController.js");
 const interiorController = require("../controllers/interiorController.js");
+const productlistController = require("../controllers/productlistController.js");
+
 
 const app = express();
 
@@ -28,5 +30,9 @@ app.get("/interior", interiorController.getInteriorPage);
 
 // const authRouter = require("./auth");
 // app.use("/api/auth", authRouter);
+
+
+// productlistController.js functions
+app.get("/productlist", productlistController.getproductlistPage);
 
 module.exports = app;

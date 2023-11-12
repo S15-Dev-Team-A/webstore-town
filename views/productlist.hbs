@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/images.css">
+    <link rel="stylesheet" type="text/css" href="/css/hover.css">
+    <link rel="icon" href="/images/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTown | Products</title>
+</head>
+
+<body style="background-color: #ffffff;">
+
+    {{> navbar}}
+
+    <div class="hori" style="justify-content: center; padding-top: 20px;">
+
+        <div class="vert block"id="all_posts">
+
+                {{#each AllProducts}}
+                    {{> productbody }}
+                {{/each}}
+
+
+        </div>
+    </div>
+
+
+
+
+    {{> cartbutton}}
+
+
+</body>
+
+
+
+
+
+
+
+</html>

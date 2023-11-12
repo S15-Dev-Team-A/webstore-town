@@ -1,0 +1,45 @@
+<div class = product_tab>
+    <div class="hori">
+        <div class="vert">
+            <a href="/profile?id={{posterId}}"><img src="data:{{imgtype}};base64, {{imgbuffer}}" width="75px" height="75px" class="post_profpic"></a>
+            <div class = "hori" style="justify-content: space-between;">
+
+
+
+            </div>
+        </div>
+
+    <a href="/post?id={{postId}}">
+        
+
+        <div class="vert">
+            <div class="hori" style="justify-content:space-between; width:600px">
+                <p class=post_author>Posted by {{username}}</p>
+                {{{del}}}
+            </div>
+            <div>
+                <p class=post_title>{{post_title}}</p>
+            </div>
+            <div>
+                <p class=post_text>{{post_text}}</p>
+            </div>
+
+        </div>
+
+    </div>
+    <hr class="separator">
+        <div class="hori" style="justify-content: space-between;">
+                <div class = "hori" >
+                    <div id="image_icon"> </div><div class="post_options">Score: {{vote}}</div>
+                    <div id="comment_icon" style="margin-left:15px"> </div><div class="post_options">Comments: {{commentnum}}</div>
+                </div>
+            <div class = "hori" >
+                        {{#if isEdited}}
+                            <div class="post_options"  style=" font-weight:100">Posted {{postSpan}}, edited {{editSpan}}</div>
+                        {{else}}
+                             <div class="post_options"  style=" font-weight:100">Posted {{postSpan}}</div>
+                        {{/if}}
+            </div>
+        </div>
+    </a>
+</div>

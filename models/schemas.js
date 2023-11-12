@@ -35,6 +35,9 @@ var memberSchema = new mongoose.Schema({    // defines the schema / model for th
     },
     points:{
         type: Number,                       // If shopper, this shows number of points user has
+    },
+    shoppingCart:{                       // If shopper, this is an Object Array representing items in the cart
+        type: Array,
     }
 });
 
@@ -61,7 +64,7 @@ var productSchema = new mongoose.Schema({    // defines the schema / model for p
         type: String,
         required: true
     },
-    picture: {                                   // Picture of the product
+    productPicture: {                                   // Picture of the product
         data: Buffer,
         contentType: String,
     },
@@ -70,7 +73,6 @@ var productSchema = new mongoose.Schema({    // defines the schema / model for p
     },
     sponsoredBy :{                           // Array of all affiliates (represented by their usernames) associated with the product
         type: Array,
-        required: true
     }
 });
 
@@ -92,7 +94,10 @@ var houseSchema = new mongoose.Schema({    // defines the schema / model for eac
     },
     sponsors :{                           // Array of all merchants (represented by their usernames) associated with the products inside the house
         type: Array,
-        required: true
+    },
+    housePicture: {                                   // Picture of the house
+        data: Buffer,
+        contentType: String,
     }
 });
 
