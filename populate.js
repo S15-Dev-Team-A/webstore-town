@@ -59,7 +59,7 @@ await db.insertOne(House, houseNew);
 var productNew = {
     productID: "00000001",
     productName: "Duffel Bag",
-    cost: 1000,
+    cost: 2400,
     variations: [ "White", "Black" ],
     merchantBrand: "Adidas",
     productPicture:{
@@ -75,7 +75,7 @@ await db.insertOne(Product, productNew);
 var productNew = {
     productID: "00000002",
     productName: "Air Max Sneakers",
-    cost: 1000,
+    cost: 8099,
     variations: [ "White", "Red" ],
     merchantBrand: "Nike",
     productPicture:{
@@ -91,7 +91,7 @@ await db.insertOne(Product, productNew);
 var productNew = {
     productID: "00000003",
     productName: "Work Laptop",
-    cost: 1000,
+    cost: 16499,
     variations: [ "Default" ],
     merchantBrand: "Samsung",
     productPicture:{
@@ -107,7 +107,7 @@ await db.insertOne(Product, productNew);
 var productNew = {
     productID: "00000004",
     productName: "Polo Shirt",
-    cost: 1000,
+    cost: 5450,
     variations: [ "Red", "Blue", "Yellow", "White", "Black", "Green"],
     merchantBrand: "Lacoste",
     productPicture:{
@@ -123,7 +123,7 @@ await db.insertOne(Product, productNew);
 var productNew = {
     productID: "00000005",
     productName: "Sofa Chair",
-    cost: 1000,
+    cost: 5990,
     variations: [ "Yellow", "Gray"],
     merchantBrand: "IKEA",
     productPicture:{

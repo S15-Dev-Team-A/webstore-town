@@ -1,45 +1,14 @@
 <div class = product_tab>
     <div class="hori">
         <div class="vert">
-            <a href="/profile?id={{posterId}}"><img src="data:{{imgtype}};base64, {{imgbuffer}}" width="75px" height="75px" class="post_profpic"></a>
-            <div class = "hori" style="justify-content: space-between;">
-
-
-
-            </div>
+            <img src="data:{{imgType}};base64, {{imgBuffer}}" width="300px" height="300px">
         </div>
-
-    <a href="/post?id={{postId}}">
-        
-
-        <div class="vert">
-            <div class="hori" style="justify-content:space-between; width:600px">
-                <p class=post_author>Posted by {{username}}</p>
-                {{{del}}}
-            </div>
-            <div>
-                <p class=post_title>{{post_title}}</p>
-            </div>
-            <div>
-                <p class=post_text>{{post_text}}</p>
-            </div>
-
-        </div>
-
     </div>
     <hr class="separator">
-        <div class="hori" style="justify-content: space-between;">
-                <div class = "hori" >
-                    <div id="image_icon"> </div><div class="post_options">Score: {{vote}}</div>
-                    <div id="comment_icon" style="margin-left:15px"> </div><div class="post_options">Comments: {{commentnum}}</div>
-                </div>
-            <div class = "hori" >
-                        {{#if isEdited}}
-                            <div class="post_options"  style=" font-weight:100">Posted {{postSpan}}, edited {{editSpan}}</div>
-                        {{else}}
-                             <div class="post_options"  style=" font-weight:100">Posted {{postSpan}}</div>
-                        {{/if}}
-            </div>
+        <div class="vert" style="justify-content: space-between;">
+                <p style="color:black; margin-top: 5px; margin-bottom:-10px; font-size:30px; font-weight:700;">{{productName}} </p>
+                <p style="color:black; margin-top: 10px; margin-bottom:-10px;">by {{merchantBrand}} </p>
+                <p style="color:black; margin-top: 20px; margin-bottom:20px; font-size:20px; font-weight:450;">{{cost}} PHP </p>
         </div>
-    </a>
+
 </div>

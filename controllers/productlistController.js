@@ -20,7 +20,8 @@ const productlistController = {
         AllProducts = await productcoll.find({}, {sort:{productID:-1}}).toArray();
 
         for (const product of AllProducts ){
-            
+            product.imgType = product.productPicture.contentType;
+            product.imgBuffer = product.productPicture.data.toString('base64')
         }
 
         res.render('productlist', {AllProducts});

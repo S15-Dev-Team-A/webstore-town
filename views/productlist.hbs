@@ -14,24 +14,32 @@
 
 <body style="background-color: #ffffff;">
 
-    {{> navbar}}
+    {{> navbar topmargin=-30 backgroundcolor="black"}}
 
-    <div class="hori" style="justify-content: center; padding-top: 20px;">
+            <div style="text-align:center"> 
+                <p style="color:black;padding-left: 110px; margin-top: 30px; margin-bottom:30px; font-size:50px; font-weight:700;">
+                    ALL PRODUCTS
+                </p></div>
+            <div class="hori" style="padding-top: 20px; flex-wrap:wrap; gap:4em; padding-left:150px;">
 
-        <div class="vert block"id="all_posts">
+
+                <!-- Right side of equals are the properties of each post in AllPosts (passed in from productlistController.js) --> 
+                <!-- Left side of equals are html elements in Post-body that will be replaced --> 
 
                 {{#each AllProducts}}
-                    {{> productbody }}
+                    {{> productbody productID=productID productName=productName cost=cost variations=variations merchantBrand=merchantBrand imgType=imgType imgBuffer=imgBuffer}}
                 {{/each}}
 
-
-        </div>
     </div>
 
 
 
+    
 
-    {{> cartbutton}}
+
+
+
+    {{> cartbutton backgroundcolor="black"}}
 
 
 </body>
