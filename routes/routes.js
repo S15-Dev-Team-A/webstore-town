@@ -27,6 +27,10 @@ app.get("/register", registerController.getRegisterPage);
 app.post("/register", registerController.postRegisterUser);
 
 app.get("/interior", interiorController.getInteriorPage);
+app.get("/room1", interiorController.getRoom1Page);
+app.get("/room2", interiorController.getRoom2Page);
+app.get("/room3", interiorController.getRoom3Page);
+app.get("/room4", interiorController.getRoom4Page);
 
 // const authRouter = require("./auth");
 // app.use("/api/auth", authRouter);
