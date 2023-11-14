@@ -35,7 +35,6 @@ memberNew.dp.contentType = 'image/jpg';
 
 await db.insertOne(Member, memberNew);
 
-
 // Adding KitKat's house
 var houseNew = {
     houseID: "00000001",
@@ -51,6 +50,95 @@ houseNew.housePicture.data = fs.readFileSync('./public/images/sample_house.png')
 houseNew.housePicture.contentType = 'image/png';
 
 await db.insertOne(House, houseNew);
+
+
+// Adding 5 additional sample affiliates
+
+//Sample Affiliate 1
+var memberNew = {
+    username: "zeus",
+    pw: "yonetopgap",
+    displayName: "Zeus",
+    accountType: "Affiliate",
+    dp:{
+        data: 1,
+        contentType: '',
+    },
+};
+
+memberNew.dp.data = fs.readFileSync('./public/images/sample_users/zeus.jpg')
+memberNew.dp.contentType = 'image/jpg';
+
+await db.insertOne(Member, memberNew);
+
+//Sample Affiliate 2
+var memberNew = {
+    username: "oner",
+    pw: "relljglgap",
+    displayName: "Oner",
+    accountType: "Affiliate",
+    dp:{
+        data: 1,
+        contentType: '',
+    },
+};
+
+memberNew.dp.data = fs.readFileSync('./public/images/sample_users/oner.jpeg')
+memberNew.dp.contentType = 'image/jpeg';
+
+await db.insertOne(Member, memberNew);
+
+//Sample Affiliate 3
+var memberNew = {
+    username: "faker",
+    pw: "azirmidgap",
+    displayName: "Faker",
+    accountType: "Affiliate",
+    dp:{
+        data: 1,
+        contentType: '',
+    },
+};
+
+memberNew.dp.data = fs.readFileSync('./public/images/sample_users/faker.jpg')
+memberNew.dp.contentType = 'image/jpg';
+
+await db.insertOne(Member, memberNew);
+
+//Sample Affiliate 4
+var memberNew = {
+    username: "gumayusi",
+    pw: "varusbotgap",
+    displayName: "Gumayusi",
+    accountType: "Affiliate",
+    dp:{
+        data: 1,
+        contentType: '',
+    },
+};
+
+memberNew.dp.data = fs.readFileSync('./public/images/sample_users/guma.jpg')
+memberNew.dp.contentType = 'image/jpg';
+
+await db.insertOne(Member, memberNew);
+
+//Sample Affiliate 5
+var memberNew = {
+    username: "keria",
+    pw: "bardsuppgap",
+    displayName: "Keria",
+    accountType: "Affiliate",
+    dp:{
+        data: 1,
+        contentType: '',
+    },
+};
+
+memberNew.dp.data = fs.readFileSync('./public/images/sample_users/keria.jpg')
+memberNew.dp.contentType = 'image/jpg';
+
+await db.insertOne(Member, memberNew);
+
 
 
 // Adding 5 sample products
