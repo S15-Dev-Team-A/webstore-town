@@ -161,3 +161,16 @@ a:hover {
     margin-top: -10px;
     cursor: pointer;
 }
+
+.houselist_owner{
+    position: absolute; 
+    bottom: 20px; 
+    right: 20px; 
+    width: 100px; 
+    height: 100px;
+}
+
+.house_and_owner{
+    position: relative; 
+    display: inline-block;
+}

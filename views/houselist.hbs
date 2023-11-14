@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/images.css">
+    <link rel="stylesheet" type="text/css" href="/css/hover.css">
+    <link rel="icon" href="/images/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTown | Houses</title>
+</head>
+
+<body style="background-color: #ffffff;">
+
+    {{> navbar topmargin=-30 backgroundcolor="black" z-index="100"}}
+
+    <div style="text-align:center"> 
+        <p style="color:black;padding-left: 110px; margin-top: 30px; margin-bottom:30px; font-size:50px; font-weight:700;">
+            ALL HOUSES
+        </p> 
+    </div>
+
+    <div class="hori" style="padding-top: 20px; flex-wrap:wrap; gap:4em; padding-left:150px;">
+
+
+        <!-- Right side of equals are the properties of each post in AllPosts (passed in from productlistController.js) --> 
+        <!-- Left side of equals are html elements in Post-body that will be replaced --> 
+
+        {{#each AllAffiliates}}
+            {{> affiliatehouse displayName=displayName houseIMGType=houseIMGType houseBuffer=houseBuffer dpIMGType=dpIMGType dpBuffer=dpBuffer}}
+        {{/each}}
+
+    </div>
+
+
+
+    
+
+
+
+
+    {{> cartbutton backgroundcolor="black"}}
+
+
+</body>
+
+
+
+
+
+
+
+</html>

@@ -8,7 +8,7 @@ const loginController = require("../controllers/loginController.js");
 const registerController = require("../controllers/registerController.js");
 const interiorController = require("../controllers/interiorController.js");
 const productlistController = require("../controllers/productlistController.js");
-
+const houselistController = require("../controllers/houselistController.js");
 
 const app = express();
 
@@ -34,5 +34,8 @@ app.get("/interior", interiorController.getInteriorPage);
 
 // productlistController.js functions
 app.get("/productlist", productlistController.getproductlistPage);
+
+//houselistController.js functions
+app.get("/houselist", houselistController.gethouselistPage);
 
 module.exports = app;
