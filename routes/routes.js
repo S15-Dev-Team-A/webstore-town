@@ -8,6 +8,7 @@ const loginController = require("../controllers/loginController.js");
 const registerController = require("../controllers/registerController.js");
 const interiorController = require("../controllers/interiorController.js");
 const productlistController = require("../controllers/productlistController.js");
+const cartController = require("../controllers/cartController.js");
 
 
 const app = express();
@@ -28,9 +29,8 @@ app.post("/register", registerController.postRegisterUser);
 
 app.get("/interior", interiorController.getInteriorPage);
 
-// const authRouter = require("./auth");
-// app.use("/api/auth", authRouter);
-
+// cartController.js functions
+app.get("/mycart", cartController.getCart);
 
 // productlistController.js functions
 app.get("/productlist", productlistController.getproductlistPage);

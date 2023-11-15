@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/images.css">
+    <link rel="stylesheet" type="text/css" href="/css/hover.css">
+    <link rel="stylesheet" type="text/css" href="/css/cart.css">
+    <link rel="icon" href="/images/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTown | Cart</title>
+</head>
+
+<body>
+    {{> navbar topmargin=-30 backgroundcolor="black"}}
+    <div class="header">
+        <p class="header-text">Cart</p>
+    </div>
+
+    <div class="cart-container">
+        <div class="cart-info-text">
+            <div class="cart-info-text-image">Image</div>
+            <div>Details</div>
+            <div>Variant</div>
+            <div>Unit Price</div>
+            <div>Quantity</div>
+            <div>Total</div>
+        </div>
+
+        <div class="cart-item">
+            <div class="item-id" hidden></div>
+
+            <div class="item-buttons">
+                <button class="remove-btn"></button>
+            </div>
+
+            <div class="item-image">
+                <img src="/images/sample_products/sofachair.png"></img>
+            </div>
+
+            <div class="item-description">
+                <div class="item-name">Sofa</div>
+                <div class="item-merchant">by IKEA</div>
+            </div>
+
+            <div class="item-variation">
+                <select id="item-variant">
+                    <option value="Default">Default</option>
+                    <option value="Ergonomic">Ergonomic</option>
+                </select>
+            </div>
+
+            <div class="item-unit-price">
+                {{!--
+                Default price - item price when no discount
+                Old price - undiscounted item price when there's a discount
+                New price - discounted item price when there's a discount
+                --}}
+                <div class="default-unit-price">PHP 750</div>
+                <div class="old-unit-price" hidden>PHP 1,450,000</div>
+                <div class="new-unit-price" hidden>PHP 1,350,000</div>
+            </div>
+
+            <div class="item-qty">
+                <button class="minus-btn"></button>
+                <input type="number" id="item-quantity" value=1>
+                <button class="add-btn"></button>
+            </div>
+
+            <div class="item-total-price">
+                <div class="total-price">PHP 750</div>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <div class="item-id" hidden></div>
+
+            <div class="item-buttons">
+                <button class="remove-btn"></button>
+            </div>
+
+            <div class="item-image">
+                <img src="/images/sample_products/airmax.png"></img>
+            </div>
+
+            <div class="item-description">
+                <div class="item-name">AirMax</div>
+                <div class="item-merchant">by Nike</div>
+            </div>
+
+            <div class="item-variation">
+                <select id="item-variant">
+                    <option value="Default">Default</option>
+                    <option value="Ergonomic">Ergonomic</option>
+                </select>
+            </div>
+
+            <div class="item-unit-price">
+                {{!--
+                Default price - item price when no discount
+                Old price - undiscounted item price when there's a discount
+                New price - discounted item price when there's a discount
+                --}}
+                <div class="default-unit-price" hidden>PHP 1,750,000</div>
+                <div class="old-unit-price">PHP 1,450,000</div>
+                <div class="new-unit-price">PHP 1,350,000</div>
+            </div>
+
+            <div class="item-qty">
+                <button class="minus-btn"></button>
+                <input type="number" id="item-quantity" value=1>
+                <button class="add-btn"></button>
+            </div>
+
+            <div class="item-total-price">
+                <div class="total-price">PHP 1,350,000</div>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="clear-all">Clear All</div>
+            <div class="subtotal-text">Subtotal</div>
+            <div class="subtotal">PHP 1,350,750</div>
+        </div>
+
+        {{!-- <div class="hori" style="padding-top: 20px; flex-wrap:wrap; gap:4em; padding-left:150px;">
+            <!-- Right side of equals are the properties of each post in AllPosts (passed in from productlistController.js) -->
+            <!-- Left side of equals are html elements in Post-body that will be replaced -->
+            {{#each AllProducts}}
+            {{> productbody productID=productID productName=productName cost=cost variations=variations
+            merchantBrand=merchantBrand imgType=imgType imgBuffer=imgBuffer}}
+            {{/each}}
+        </div> --}}
+    </div>
+</body>
+
+</html>
