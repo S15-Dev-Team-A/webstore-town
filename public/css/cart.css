@@ -1,0 +1,142 @@
+body {
+    background-color: white;
+}
+
+.header {
+    text-align: center;
+}
+
+.header-text {
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cart-container {
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    width: 70%;
+    margin: auto;
+}
+
+.cart-info-text {
+    color: black;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 75px repeat(6, 200px);
+}
+
+.cart-info-text-image {
+    grid-column-start: 2;
+}
+
+.cart-item {
+    border-top: 1px solid #e1e8ee;
+    border-bottom: 1px solid #e1e8ee;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 75px repeat(6, 200px);
+    justify-items: center;
+    align-items: center;
+}
+
+.remove-btn {
+    width: 20px;
+    height: 20px;
+    background: url(/images/cart_cross.png) center;
+    border: transparent;
+}
+
+.item-image img {
+    width: 125px;
+}
+
+.item-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    color: black;
+}
+
+.item-merchant {
+    color: darkgray;
+}
+
+.item-variation {
+    color: gray;
+}
+
+.item-unit-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.default-unit-price,
+.new-unit-price,
+.total-price {
+    color: black;
+}
+
+.old-unit-price {
+    text-decoration: line-through;
+    color: red;
+}
+
+.item-qty {
+    display: flex;
+    flex-direction: row;
+}
+
+/* hack to remove the increment and decrement buttons on Mozilla */
+#item-quantity {
+    -moz-appearance: textfield;
+    text-align: center;
+    width: 40px;
+}
+
+/* hack to remove the increment and decrement buttons on Chromium */
+#item-quantity::-webkit-inner-spin-button,
+#item-quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.item-qty button {
+    width: 14px;
+    height: 14px;
+    margin: 15px;
+    border: transparent;
+}
+
+.minus-btn {
+    background: url(/images/cart_minus.png) center;
+}
+
+.add-btn {
+    background: url(/images/cart_plus.png) center;
+}
+
+.total-price {
+    text-align: center;
+}
+
+.cart-footer {
+    padding: 20px 10px 20px 10px;
+    color: black;
+    display: grid;
+    grid-template-columns: 75px repeat(6, 200px);
+    justify-items: center;
+}
+
+.subtotal-text {
+    grid-column: 6;
+    font-weight: bold;
+}
+
+.subtotal {
+    grid-column: 7;
+    font-weight: bold;
+}

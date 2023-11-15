@@ -8,6 +8,7 @@ const loginController = require("../controllers/loginController.js");
 const registerController = require("../controllers/registerController.js");
 const interiorController = require("../controllers/interiorController.js");
 const productlistController = require("../controllers/productlistController.js");
+const cartController = require("../controllers/cartController.js");
 const houselistController = require("../controllers/houselistController.js");
 
 const app = express();
@@ -32,9 +33,8 @@ app.get("/room2", interiorController.getRoom2Page);
 app.get("/room3", interiorController.getRoom3Page);
 app.get("/room4", interiorController.getRoom4Page);
 
-// const authRouter = require("./auth");
-// app.use("/api/auth", authRouter);
-
+// cartController.js functions
+app.get("/mycart", cartController.getCart);
 
 // productlistController.js functions
 app.get("/productlist", productlistController.getproductlistPage);
