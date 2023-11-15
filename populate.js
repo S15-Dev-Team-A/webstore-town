@@ -46,7 +46,7 @@ var houseNew = {
     },
 };
 
-houseNew.housePicture.data = fs.readFileSync('./public/images/sample_house.png');
+houseNew.housePicture.data = fs.readFileSync('./public/images/sample_house_2.png');
 houseNew.housePicture.contentType = 'image/png';
 
 await db.insertOne(House, houseNew);

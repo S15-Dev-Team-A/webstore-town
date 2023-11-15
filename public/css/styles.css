@@ -11,6 +11,10 @@ button {
     text-align: justify;
 }
 
+label {
+    text-shadow: 0 0 12px #000000;
+}
+
 a {
     all: unset;
 }
