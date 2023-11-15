@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/images.css">
+    <link rel="stylesheet" type="text/css" href="/css/hover.css">
+    <link rel="icon" href="/images/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTown | Home</title>
+</head>
+
+<body style="background-color:;">
+    <div style="margin-left:120px;">
+        <div style="position:absolute;" >
+            <img class="interior" src="/images/sample_rooms/room1.png" />
+
+
+            <img class="dot" style="  margin-left:530px; margin-top:290px;" src="/images/click_dot.gif" />
+            <img class="dot" style="  margin-left:100px; margin-top:340px;" src="/images/click_dot.gif" />
+            <img class="dot" style="  margin-left:400px; margin-top:100px;" src="/images/click_dot.gif" />
+        </div>
+        {{> cartbutton backgroundcolor="black"}}
+    </div>
+                    
+    {{> navbar}}
+</body>
+
+<script type="text/javascript"> // Deleting
+    var dots = document.getElementsByClassName("dot");
+    for (var i = 0; i < dots.length; i++) {
+        var dot = dots[i];
+        dot.addEventListener("click", clickdot);
+    }
+    function clickdot(e) {
+        alert('Item added to cart!');
+    }
+</script>
+
+</html>

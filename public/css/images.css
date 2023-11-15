@@ -19,19 +19,80 @@
 
 .interior {
     position: absolute;
-    width: 800px;
-    padding: 0;
-    margin-left: 400px;
-    margin-top: 30px;
+    width: 1300px;
+    margin-left: 25px;
+    margin-top:-190px;
 }
+
 
 .dot {
     position: absolute;
-    width: 50px;
+    width: 25px;
     padding: 0;
     transition: 0.3s;
 }
 
 .dot:hover {
     cursor: pointer;
+}
+
+.room1 {
+    position: absolute;
+    width: 500px;
+    padding: 0;
+    margin-left: 495px;
+    margin-top: -75px;
+    transition: 0.3s;
+
+}
+
+.room1:hover{
+    cursor: pointer;
+    margin-top: -95px;
+}
+
+.room2 {
+    position: absolute;
+    width: 500px;
+    padding: 0;
+    margin-left: 747px;
+    margin-top: 50px;
+    transition: 0.3s;
+
+}
+
+.room2:hover{
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.room3 {
+    position: absolute;
+    width: 500px;
+    padding: 0;
+    margin-left: 250px;
+    margin-top: 50px;
+    transition: 0.3s;
+
+}
+
+.room3:hover{
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+
+.room4 {
+    position: absolute;
+    width: 500px;
+    padding: 0;
+    margin-left: 495px;
+    margin-top: 180px;
+    transition: 0.3s;
+
+}
+
+.room4:hover{
+    cursor: pointer;
+    margin-top: 160px;
 }

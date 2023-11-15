@@ -12,18 +12,32 @@
     <title>WebTown | Home</title>
 </head>
 
-<body style="background-color: #c78978;">
+<body style="background-color:">
     <div>
         <div class="">
         </div>
-        {{> navbar}}
-        <div style="position:absolute;">
-            <img class="interior" src="/images/sample_room.png" />
-            <img class="dot" style="  margin-left:530px; margin-top:290px;" src="/images/click_dot.gif" />
-            <img class="dot" style="  margin-left:1130px; margin-top:340px;" src="/images/click_dot.gif" />
-            <img class="dot" style="  margin-left:850px; margin-top:300px;" src="/images/click_dot.gif" />
+        {{> navbar topmargin=-40}}
+        <div>
+            <p style="text-align:right; font-size:40px; margin-right:50px">
+                Kitkat's Home
+            </p>
+        </div>
+        <div style="position:absolute; ">
+
+            <a href="/room1">  <img class="room1" src="/images/sample_rooms/room1.png" /> </a>
+            <a href="/room2">  <img class="room2" src="/images/sample_rooms/room2.png" /> </a>
+            <a href="/room3">  <img class="room3" src="/images/sample_rooms/room3.png" /> </a>
+            <a href="/room4">  <img class="room4" src="/images/sample_rooms/room4.png" /> </a>
         </div>
         {{> cartbutton}}
+            <div>
+                <a href="/">
+                     <p style="text-align:left; font-size:40px; margin-top: -78px;  margin-left:230px; vertical-align:text-bottom;">
+                        ← BACK
+                    </p>
+                </a>
+
+        </div>
     </div>
 </body>
 
