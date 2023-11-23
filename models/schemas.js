@@ -53,6 +53,10 @@ var productSchema = new mongoose.Schema({    // defines the schema / model for p
         type: String,
         required: true,
     },
+    description:{                           // Name of the product
+        type: String,
+        required: true,
+    },
     cost:{                           // Determines the price of the product
         type: Number,
         required:true
