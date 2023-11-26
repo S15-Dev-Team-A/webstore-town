@@ -10,7 +10,7 @@ const loginController = {
     getLoginPage: function (req, res) {
         // prevent user from accessing login page when they are logged in
         if (req.session.loggedIn) {
-            res.render("home");
+            res.redirect("/");
             return;
         }
 
@@ -44,7 +44,8 @@ const loginController = {
 
             req.session.loggedIn = true;
             req.session.username = existingUsername.username;
-            res.render("home");
+
+            res.redirect("/");
         } catch (e) {
             console.error(e);
         }

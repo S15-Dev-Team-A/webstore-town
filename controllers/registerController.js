@@ -10,7 +10,7 @@ const registerController = {
     getRegisterPage: function (req, res) {
         // prevent user from accessing register page when they are logged in
         if (req.session.loggedIn) {
-            res.render("home");
+            res.redirect("/");
             return;
         }
 
@@ -57,7 +57,10 @@ const registerController = {
                 accountType: req.body["accountType"],
             }).save();
 
-            res.render("home");
+            req.session.loggedIn = true;
+            req.session.username = req.body["username"];
+
+            res.redirect("/");
         } catch (e) {
             console.error(e);
         }
@@ -73,7 +76,7 @@ const validateUsername = function (username) {
 const validatePassword = function (password) {
     // from https://stackoverflow.com/a/3802238
     const re =
-        /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,}$/;
+        /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-._])(?=\S+$).{8,}$/;
     return re.test(password);
 };
 
