@@ -6,6 +6,7 @@ const express = require("express");
 const mainController = require("../controllers/mainController.js"); // For index.js (base controller)
 const loginController = require("../controllers/loginController.js");
 const registerController = require("../controllers/registerController.js");
+const logoutController = require("../controllers/logoutController.js");
 const interiorController = require("../controllers/interiorController.js");
 const productlistController = require("../controllers/productlistController.js");
 const cartController = require("../controllers/cartController.js");
@@ -26,6 +27,11 @@ app.post("/login", loginController.postLoginUser);
 // for the /register webpage
 app.get("/register", registerController.getRegisterPage);
 app.post("/register", registerController.postRegisterUser);
+
+// logoutController.js functions
+// for the /logout webpage
+app.get("/logout", logoutController.getLogoutUser);
+app.post("/logout", logoutController.postLogoutUser);
 
 app.get("/interior", interiorController.getInteriorPage);
 app.get("/room1", interiorController.getRoom1Page);
