@@ -81,15 +81,17 @@ const interiorController = {
 
         var product = await db.findOne(Product, {productID: prodid});
 
-        if(req.session.userId){
-            var shopper = await db.findOne(Member, {username: req.session.userId});
+        if(req.session.loggedIn){
+            var shopper = await db.findOne(Member, {username: req.session.username});
 
             // Add Quantity and Chosen Variation attributes to customize product in shopping cart
             product.quantity = 1;   // By default, only one
             product.chosenVariation = 0; // Index of variation chosen (in array), by default, first variation
 
             // Push product to their shopping cart
-            shopper.shoppingCart.push(product);
+            shopper.shoppingCart.push(product.productID);
+            
+            await shopper.save();
 
             output= true; // Logged in, added to cart successfully
         } else {
