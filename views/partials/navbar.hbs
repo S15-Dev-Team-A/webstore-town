@@ -4,12 +4,21 @@
             <div style="padding-left: 20px;     text-shadow: 0 0 12px #000000; margin-top: 20px; margin-bottom:10px; font-size:35px; font-weight:500;">
                 <a href="/">WEBTOWN</a>
             </div>
+            {{#if session.loggedIn}}
+            <div class="navbarText">
+                <a href="/profile">My Profile</a>
+            </div>
+            {{/if}}
+            {{#unless session.loggedIn}}
             <div class="navbarText">
                 <a href="/login">Login</a>
             </div>
+            {{/unless}}
+            {{#unless session.loggedIn}}
             <div class="navbarText">
                 <a href="/register">Register</a>
             </div>
+            {{/unless}}
             <div class="navbarText">
                 <a href="/houselist">Houses</a>
             </div>

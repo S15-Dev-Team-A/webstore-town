@@ -34,6 +34,12 @@ app.use(session({               // use `express-session` for sessions and set it
     store: new MongoStore({mongooseConnection: mongoose.connection})    // use `MongoStore` as server-side session storage
 }));
 
+// access session data by assigning and accessing `session.<attribute>` in .hbs files
+app.use(function (req, res, next) {
+    res.locals.session = req.session;
+    next();
+});
+
 // Define the paths contained in `./routes/routes.js`
 app.use('/', routes);
 
