@@ -118,7 +118,7 @@ a:hover {
 }
 .container input[type="submit"] {
     width: 100%;
-    background-color: #9e8b22;
+    background-color: #229e6f;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -127,7 +127,7 @@ a:hover {
 }
 
 .container input[type="submit"]:hover {
-    background-color: #b3b168;
+    background-color: #68b372;
 }
 
 /* Horizontal flex container */

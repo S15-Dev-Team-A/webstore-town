@@ -32,6 +32,8 @@ app.get("/room1", interiorController.getRoom1Page);
 app.get("/room2", interiorController.getRoom2Page);
 app.get("/room3", interiorController.getRoom3Page);
 app.get("/room4", interiorController.getRoom4Page);
+app.get("/hoverProduct", interiorController.hoverProduct);
+app.get("/clickProduct", interiorController.clickProduct);
 
 // cartController.js functions
 app.get("/mycart", cartController.getCart);

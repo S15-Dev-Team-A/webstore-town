@@ -10,6 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebTown | Home</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
 </head>
 
 <body style="background-color:;">
@@ -18,25 +24,17 @@
             <img class="interior" src="/images/sample_rooms/room2.png" />
 
 
-            <img class="dot" style="  margin-left:530px; margin-top:290px;" src="/images/click_dot.gif" />
-            <img class="dot" style="  margin-left:1110px; margin-top:440px;" src="/images/click_dot.gif" />
-            <img class="dot" style="  margin-left:850px; margin-top:400px;" src="/images/click_dot.gif" />
+            <img title="" class="dot" prodid="00000001" style="  margin-left:530px; margin-top:290px;" src="/images/click_dot.gif" />
+            <img title="" class="dot" prodid="00000003" style="  margin-left:1110px; margin-top:440px;" src="/images/click_dot.gif" />
+            <img title="" class="dot" prodid="00000004" style="  margin-left:850px; margin-top:400px;" src="/images/click_dot.gif" />
         </div>
         {{> cartbutton backgroundcolor="black"}}
     </div>
                     
     {{> navbar}}
+
+            <script src="/js/product.js"></script>
 </body>
 
-<script type="text/javascript"> // Deleting
-    var dots = document.getElementsByClassName("dot");
-    for (var i = 0; i < dots.length; i++) {
-        var dot = dots[i];
-        dot.addEventListener("click", clickdot);
-    }
-    function clickdot(e) {
-        alert('Item added to cart!');
-    }
-</script>
 
 </html>
