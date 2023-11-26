@@ -25,7 +25,7 @@ async function populate() {
     // Adding KitKat as an affiliate
     var memberNew = {
         username: "kitkat04",
-        pw: "kitkatchocolate",
+        pw: "$2b$10$xKdGiDlCRBVEOO.s8ddHXe3zQlDIi2k298bmYURtqBuldArE4WJlC",
         displayName: "Kitkat",
         accountType: "Affiliate",
         dp: {
@@ -64,7 +64,7 @@ async function populate() {
     //Sample Affiliate 1
     var memberNew = {
         username: "zeus",
-        pw: "yonetopgap",
+        pw: "$2b$10$DPnW9o5k1LvJhk3wQLfnOOydKDfxhetITvW4ucbK.EdsQn47WfFaa",
         displayName: "Zeus",
         accountType: "Affiliate",
         dp: {
@@ -83,7 +83,7 @@ async function populate() {
     //Sample Affiliate 2
     var memberNew = {
         username: "oner",
-        pw: "relljglgap",
+        pw: "$2b$10$a8h25tmviPX4FLDy80Du5uBPGrNBMonuJgvvYbcw9YlNPIrXdja1a",
         displayName: "Oner",
         accountType: "Affiliate",
         dp: {
@@ -102,7 +102,7 @@ async function populate() {
     //Sample Affiliate 3
     var memberNew = {
         username: "faker",
-        pw: "azirmidgap",
+        pw: "$2b$10$MSlWoFwON56StF3UHA1lBen7qqIAs8Ba3vxWmcRlKWAmjYRc1RivK",
         displayName: "Faker",
         accountType: "Affiliate",
         dp: {
@@ -121,7 +121,7 @@ async function populate() {
     //Sample Affiliate 4
     var memberNew = {
         username: "gumayusi",
-        pw: "varusbotgap",
+        pw: "$2b$10$cfb7hK6CV6jsm480sb1ycu0EsTQ9CIjEiWcOnpmtpxVKGCLlsMpuS",
         displayName: "Gumayusi",
         accountType: "Affiliate",
         dp: {
@@ -140,7 +140,7 @@ async function populate() {
     //Sample Affiliate 5
     var memberNew = {
         username: "keria",
-        pw: "bardsuppgap",
+        pw: "$2b$10$bbIvvRR0vqZGT/KT6fqdT.vjNvNJwSGoa.z9GboWpt/vKKiiAjd4C",
         displayName: "Keria",
         accountType: "Affiliate",
         dp: {
@@ -161,7 +161,7 @@ async function populate() {
     var productNew = {
         productID: "00000001",
         productName: "Duffel Bag",
-        description: "A soft oblong bag for personal belongings",
+        description: "A soft oblong bag for personal belongings.",
         cost: 2400,
         variations: ["White", "Black"],
         merchantBrand: "Adidas",
