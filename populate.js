@@ -147,6 +147,7 @@ await db.insertOne(Member, memberNew);
 var productNew = {
     productID: "00000001",
     productName: "Duffel Bag",
+    description: "A soft oblong bag for personal belongings",
     cost: 2400,
     variations: [ "White", "Black" ],
     merchantBrand: "Adidas",
@@ -163,6 +164,7 @@ await db.insertOne(Product, productNew);
 var productNew = {
     productID: "00000002",
     productName: "Air Max Sneakers",
+    description: "Nike's Air Max shoes are iconic athletic footwear known for their innovative design featuring visible air cushioning units.",
     cost: 8099,
     variations: [ "White", "Red" ],
     merchantBrand: "Nike",
@@ -179,6 +181,7 @@ await db.insertOne(Product, productNew);
 var productNew = {
     productID: "00000003",
     productName: "Work Laptop",
+    description: "Sleek and powerful, Samsung laptops seamlessly combine style and performance for a tech-savvy and efficient computing experience.",
     cost: 16499,
     variations: [ "Default" ],
     merchantBrand: "Samsung",
@@ -195,6 +198,7 @@ await db.insertOne(Product, productNew);
 var productNew = {
     productID: "00000004",
     productName: "Polo Shirt",
+    description: "timeless elegance embodied in a comfortable and iconic design with the signature crocodile logo.",
     cost: 5450,
     variations: [ "Red", "Blue", "Yellow", "White", "Black", "Green"],
     merchantBrand: "Lacoste",
@@ -211,6 +215,7 @@ await db.insertOne(Product, productNew);
 var productNew = {
     productID: "00000005",
     productName: "Sofa Chair",
+    description: "A perfect blend of comfort and Scandinavian design, effortlessly enhancing any living space.",
     cost: 5990,
     variations: [ "Yellow", "Gray"],
     merchantBrand: "IKEA",
