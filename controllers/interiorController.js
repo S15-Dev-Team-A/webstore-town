@@ -89,7 +89,7 @@ const interiorController = {
             product.chosenVariation = 0; // Index of variation chosen (in array), by default, first variation
 
             // Push product to their shopping cart
-            shopper.shoppingCart.push(product.productID);
+            shopper.shoppingCart.push(product);
             
             await shopper.save();
 
