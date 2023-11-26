@@ -10,7 +10,7 @@ const registerController = {
     getRegisterPage: function (req, res) {
         // prevent user from accessing register page when they are logged in
         if (req.session.loggedIn) {
-            res.render("home");
+            res.redirect("/");
             return;
         }
 
@@ -60,7 +60,7 @@ const registerController = {
             req.session.loggedIn = true;
             req.session.username = req.body["username"];
 
-            res.render("home");
+            res.redirect("/");
         } catch (e) {
             console.error(e);
         }
