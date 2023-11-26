@@ -57,6 +57,9 @@ const registerController = {
                 accountType: req.body["accountType"],
             }).save();
 
+            req.session.loggedIn = true;
+            req.session.username = req.body["username"];
+
             res.render("home");
         } catch (e) {
             console.error(e);
