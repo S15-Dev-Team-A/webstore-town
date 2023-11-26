@@ -21,19 +21,21 @@
 
     <div class="cart-container">
         <div class="cart-info-text">
+            <div class="include-item-text">Include?</div>
             <div class="cart-info-text-image">Image</div>
             <div>Details</div>
             <div>Variant</div>
             <div>Unit Price</div>
             <div>Quantity</div>
             <div>Total</div>
+            <div>Actions</div>
         </div>
 
         <div class="cart-item">
             <div class="item-id" hidden></div>
 
-            <div class="item-buttons">
-                <button class="remove-btn"></button>
+            <div class="include-item">
+                <input type="checkbox">
             </div>
 
             <div class="item-image">
@@ -43,6 +45,8 @@
             <div class="item-description">
                 <div class="item-name">Sofa</div>
                 <div class="item-merchant">by IKEA</div>
+                <div class="description-text">A perfect blend of comfort and Scandinavian design, effortlessly enhancing
+                    any living space.</div>
             </div>
 
             <div class="item-variation">
@@ -72,13 +76,17 @@
             <div class="item-total-price">
                 <div class="total-price">PHP 750</div>
             </div>
+
+            <div class="item-buttons">
+                <button class="remove-btn"></button>
+            </div>
         </div>
 
         <div class="cart-item">
             <div class="item-id" hidden></div>
 
-            <div class="item-buttons">
-                <button class="remove-btn"></button>
+            <div class="include-item">
+                <input type="checkbox">
             </div>
 
             <div class="item-image">
@@ -88,6 +96,8 @@
             <div class="item-description">
                 <div class="item-name">AirMax</div>
                 <div class="item-merchant">by Nike</div>
+                <div class="description-text">Nike's Air Max shoes are iconic athletic footwear known for their
+                    innovative design featuring visible air cushioning units.</div>
             </div>
 
             <div class="item-variation">
@@ -117,22 +127,25 @@
             <div class="item-total-price">
                 <div class="total-price">PHP 1,350,000</div>
             </div>
+
+            <div class="item-buttons">
+                <button class="remove-btn"></button>
+            </div>
         </div>
 
-        <div class="cart-footer">
-            <div class="clear-all">Clear All</div>
+        <div class="cart-footer cart-footer-1">
+            <div class="select-all">Select All</div>
             <div class="subtotal-text">Subtotal</div>
             <div class="subtotal">PHP 1,350,750</div>
         </div>
 
-        {{!-- <div class="hori" style="padding-top: 20px; flex-wrap:wrap; gap:4em; padding-left:150px;">
-            <!-- Right side of equals are the properties of each post in AllPosts (passed in from productlistController.js) -->
-            <!-- Left side of equals are html elements in Post-body that will be replaced -->
-            {{#each AllProducts}}
-            {{> productbody productID=productID productName=productName cost=cost variations=variations
-            merchantBrand=merchantBrand imgType=imgType imgBuffer=imgBuffer}}
-            {{/each}}
-        </div> --}}
+        <div class="cart-footer cart-footer-1">
+            <div class="points-gained-text">Points Gained</div>
+            <div class="points">1,350,750</div>
+            <div class="check-out-text">
+                <button>Check Out</button>
+            </div>
+        </div>
     </div>
 </body>
 
