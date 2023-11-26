@@ -76,7 +76,7 @@ const validateUsername = function (username) {
 const validatePassword = function (password) {
     // from https://stackoverflow.com/a/3802238
     const re =
-        /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\S+$).{8,}$/;
+        /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-._])(?=\S+$).{8,}$/;
     return re.test(password);
 };
 

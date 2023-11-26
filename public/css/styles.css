@@ -125,6 +125,10 @@ a:hover {
     cursor: pointer;
     border: none;
 }
+.field-info {
+    font-size: small;
+    text-shadow: 0 0 8px #000000;
+}
 
 .container input[type="submit"]:hover {
     background-color: #b3b168;
