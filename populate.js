@@ -156,105 +156,145 @@ async function populate() {
 
     await db.insertOne(Member, memberNew);
 
-    // Adding 5 sample products
-
+    // Adding products
+    
     var productNew = {
         productID: "00000001",
-        productName: "Duffel Bag",
-        description: "A soft oblong bag for personal belongings.",
-        cost: 2400,
-        variations: ["White", "Black"],
-        merchantBrand: "Adidas",
+        productName: "Parcel Pushchair",
+        description: "Anywhere, anytime and any mood, parcel™ is always travel ready with an easily activated compact fold.",
+        cost: 0,
+        variations: ["Oyster", "Eclipse", "Pine", "Carbon"],
+        merchantBrand: "Joie Signature",
         productPicture: {
             data: 1,
             contentType: "",
         },
     };
     productNew.productPicture.data = fs.readFileSync(
-        "./public/images/sample_products/duffelbag.png"
+        "./public/images/products/00000001.png"
     );
     productNew.productPicture.contentType = "image/png";
-
     await db.insertOne(Product, productNew);
 
     var productNew = {
         productID: "00000002",
-        productName: "Air Max Sneakers",
-        description:
-            "Nike's Air Max shoes are iconic athletic footwear known for their innovative design featuring visible air cushioning units.",
-        cost: 8099,
-        variations: ["White", "Red"],
-        merchantBrand: "Nike",
+        productName: "Alpha 2",
+        description: "Platinum Karaoke is raising the bar in entertainment experience in Alpha 2. We present to you another All-in-one package that will surely fulfill all  your entertainment needs.",
+        cost: 30995,
+        merchantBrand: "Platinum Karaoke",
         productPicture: {
             data: 1,
             contentType: "",
         },
     };
     productNew.productPicture.data = fs.readFileSync(
-        "./public/images/sample_products/airmax.png"
+        "./public/images/products/00000002.png"
     );
     productNew.productPicture.contentType = "image/png";
-
     await db.insertOne(Product, productNew);
 
     var productNew = {
         productID: "00000003",
-        productName: "Work Laptop",
-        description:
-            "Sleek and powerful, Samsung laptops seamlessly combine style and performance for a tech-savvy and efficient computing experience.",
-        cost: 16499,
-        variations: ["Default"],
-        merchantBrand: "Samsung",
+        productName: "Coffee Drink Mix",
+        description: "VitaGold Coffee Drink Mix with Beta-Glucan and Herbal Extracts is a yummy and healthy alternative to a regular 3-in-1 Coffee. It contains 1,3-1,6 Beta-Glucan, Malunggay, Spinach, Acai Berry and Sweetened by Stevia.",
+        cost: 250,
+        merchantBrand: "VitaGold",
         productPicture: {
             data: 1,
             contentType: "",
         },
     };
     productNew.productPicture.data = fs.readFileSync(
-        "./public/images/sample_products/laptop.png"
+        "./public/images/products/00000003.png"
     );
     productNew.productPicture.contentType = "image/png";
-
     await db.insertOne(Product, productNew);
 
     var productNew = {
         productID: "00000004",
-        productName: "Polo Shirt",
-        description:
-            "timeless elegance embodied in a comfortable and iconic design with the signature crocodile logo.",
-        cost: 5450,
-        variations: ["Red", "Blue", "Yellow", "White", "Black", "Green"],
-        merchantBrand: "Lacoste",
+        productName: "Tinted Sunscreen",
+        description: "Discover the perfect blend of skincare and sun protection with Blanc Pro's Tinted Sunscreen SPF30. Designed to address the undeniable effects of sun exposure, this innovative product is a must-have addition to your daily routine. Crafted with potent antioxidants, it not only fights signs of aging but also provides a robust shield against harmful UVA rays.",
+        cost: 399,
+        merchantBrand: "Blanc Pro",
         productPicture: {
             data: 1,
             contentType: "",
         },
     };
     productNew.productPicture.data = fs.readFileSync(
-        "./public/images/sample_products/poloshirt.png"
+        "./public/images/products/00000004.png"
     );
     productNew.productPicture.contentType = "image/png";
-
     await db.insertOne(Product, productNew);
 
     var productNew = {
         productID: "00000005",
-        productName: "Sofa Chair",
-        description:
-            "A perfect blend of comfort and Scandinavian design, effortlessly enhancing any living space.",
-        cost: 5990,
-        variations: ["Yellow", "Gray"],
-        merchantBrand: "IKEA",
+        productName: "Airtight Food Storage Container",
+        description: "An airtight, leakproof, one touch button, BPA-free, stackable food storage container",
+        cost: 272,
+        merchantBrand: "Ankou",
         productPicture: {
             data: 1,
             contentType: "",
         },
     };
     productNew.productPicture.data = fs.readFileSync(
-        "./public/images/sample_products/sofachair.png"
+        "./public/images/products/00000005.png"
     );
     productNew.productPicture.contentType = "image/png";
+    await db.insertOne(Product, productNew);
 
+    var productNew = {
+        productID: "00000006",
+        productName: "Teddy Bear",
+        description: "Cuddly Bear! Super Soft and Fluffy!",
+        cost: 350,
+        merchantBrand: "Macxy's Fun Toys",
+        productPicture: {
+            data: 1,
+            contentType: "",
+        },
+    };
+    productNew.productPicture.data = fs.readFileSync(
+        "./public/images/products/00000006.png"
+    );
+    productNew.productPicture.contentType = "image/png";
+    await db.insertOne(Product, productNew);
+
+    var productNew = {
+        productID: "00000007",
+        productName: "Honey Bunny",
+        description: "As cuddly as a plush toy, this cute little rabbit is the perfect companion for the kids. A multi-functional digital player that is specially designed for children, the Honey Bunny can be used as early educational assistant (through the playback of stories, songs and poems) and a toy. Safe with no sharp edges, soft silicon ears and a drop-resistant body means this digital player can be directly handled by the children compared to other digital devices.",
+        cost: 2400,
+        variations: ["Blue", "Pink", "Red"],
+        merchantBrand: "Alilo",
+        productPicture: {
+            data: 1,
+            contentType: "",
+        },
+    };
+    productNew.productPicture.data = fs.readFileSync(
+        "./public/images/products/00000007.png"
+    );
+    productNew.productPicture.contentType = "image/png";
+    await db.insertOne(Product, productNew);
+
+    var productNew = {
+        productID: "00000008",
+        productName: "Nutribaby(+)",
+        description: "This 6-in-1 Multi-Purpose Baby Food Processor is the must-have for varied, tasty meals!",
+        cost: 12500,
+        variations: ["Loft White", "Industrial Grey"],
+        merchantBrand: "babymoov",
+        productPicture: {
+            data: 1,
+            contentType: "",
+        },
+    };
+    productNew.productPicture.data = fs.readFileSync(
+        "./public/images/products/00000008.png"
+    );
+    productNew.productPicture.contentType = "image/png";
     await db.insertOne(Product, productNew);
 
     process.exit(0);
