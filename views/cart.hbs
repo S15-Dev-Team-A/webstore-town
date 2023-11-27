@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/js/cart_scripts.js"></script>
     <title>WebTown | Cart</title>
 </head>
 
@@ -32,7 +33,7 @@
         </div>
 
         {{#each cartItems }}
-        {{> cartitem this }}
+        {{> cartitem this index=@index}}
         {{/each}}
 
         <div class="cart-footer cart-footer-1">

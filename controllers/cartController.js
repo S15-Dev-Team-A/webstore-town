@@ -24,6 +24,17 @@ const cartController = {
             points: points,
         });
     },
+
+    postRemoveCartItem: async function (req, res) {
+        if (!req.session.loggedIn) {
+            return;
+        }
+
+        const user = await Member.findOne({username: req.session.username}).exec();
+        user.shoppingCart.splice(req.body["index"], 1);
+        await user.save();
+        res.sendStatus(200);
+    }
 };
 
 const getCartItems = async function (username) {

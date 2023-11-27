@@ -43,6 +43,7 @@ app.get("/clickProduct", interiorController.clickProduct);
 
 // cartController.js functions
 app.get("/mycart", cartController.getCart);
+app.post("/removeCartItem", cartController.postRemoveCartItem);
 
 // productlistController.js functions
 app.get("/productlist", productlistController.getproductlistPage);
