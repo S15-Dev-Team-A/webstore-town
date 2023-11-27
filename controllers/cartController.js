@@ -30,11 +30,51 @@ const cartController = {
             return;
         }
 
-        const user = await Member.findOne({username: req.session.username}).exec();
+        const user = await Member.findOne({
+            username: req.session.username,
+        }).exec();
         user.shoppingCart.splice(req.body["index"], 1);
         await user.save();
         res.sendStatus(200);
-    }
+    },
+
+    postAddCartItemQty: async function (req, res) {
+        if (!req.session.loggedIn) {
+            return;
+        }
+
+        const user = await Member.findOne({
+            username: req.session.username,
+        }).exec();
+
+        const index = req.body["index"];
+        user.shoppingCart[index].quantity += 1;
+        user.markModified("shoppingCart");
+        await user.save();
+        res.sendStatus(200);
+    },
+
+    postMinusCartItemQty: async function (req, res) {
+        if (!req.session.loggedIn) {
+            return;
+        }
+
+        const user = await Member.findOne({
+            username: req.session.username,
+        }).exec();
+
+        const index = req.body["index"];
+        user.shoppingCart[index].quantity -= 1;
+
+        // if quantity is <= 0, remove the item instead
+        if (user.shoppingCart[index].quantity <= 0) {
+            user.shoppingCart.splice(index, 1);
+        }
+        
+        user.markModified("shoppingCart");
+        await user.save();
+        res.sendStatus(200);
+    },
 };
 
 const getCartItems = async function (username) {
