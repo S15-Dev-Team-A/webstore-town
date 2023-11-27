@@ -170,6 +170,7 @@ a:hover {
     cursor: pointer;
 }
 
+/* house formatting */
 .houselist_owner{
     position: absolute; 
     bottom: 20px; 
@@ -183,6 +184,12 @@ a:hover {
     display: inline-block;
 }
 
+/* ellipsis text */
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /*Profile classes*/
 
