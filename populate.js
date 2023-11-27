@@ -181,6 +181,7 @@ async function populate() {
         productName: "Alpha 2",
         description: "Platinum Karaoke is raising the bar in entertainment experience in Alpha 2. We present to you another All-in-one package that will surely fulfill all  your entertainment needs.",
         cost: 30995,
+        variations: ["Default"],
         merchantBrand: "Platinum Karaoke",
         productPicture: {
             data: 1,
@@ -198,6 +199,7 @@ async function populate() {
         productName: "Coffee Drink Mix",
         description: "VitaGold Coffee Drink Mix with Beta-Glucan and Herbal Extracts is a yummy and healthy alternative to a regular 3-in-1 Coffee. It contains 1,3-1,6 Beta-Glucan, Malunggay, Spinach, Acai Berry and Sweetened by Stevia.",
         cost: 250,
+        variations: ["Default"],
         merchantBrand: "VitaGold",
         productPicture: {
             data: 1,
@@ -215,6 +217,7 @@ async function populate() {
         productName: "Tinted Sunscreen",
         description: "Discover the perfect blend of skincare and sun protection with Blanc Pro's Tinted Sunscreen SPF30. Designed to address the undeniable effects of sun exposure, this innovative product is a must-have addition to your daily routine. Crafted with potent antioxidants, it not only fights signs of aging but also provides a robust shield against harmful UVA rays.",
         cost: 399,
+        variations: ["Default"],
         merchantBrand: "Blanc Pro",
         productPicture: {
             data: 1,
@@ -232,6 +235,7 @@ async function populate() {
         productName: "Airtight Food Storage Container",
         description: "An airtight, leakproof, one touch button, BPA-free, stackable food storage container",
         cost: 272,
+        variations: ["Default"],
         merchantBrand: "Ankou",
         productPicture: {
             data: 1,
@@ -249,6 +253,7 @@ async function populate() {
         productName: "Teddy Bear",
         description: "Cuddly Bear! Super Soft and Fluffy!",
         cost: 350,
+        variations: ["Default"],
         merchantBrand: "Macxy's Fun Toys",
         productPicture: {
             data: 1,
