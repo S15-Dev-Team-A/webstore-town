@@ -70,7 +70,43 @@ const cartController = {
         if (user.shoppingCart[index].quantity <= 0) {
             user.shoppingCart.splice(index, 1);
         }
-        
+
+        user.markModified("shoppingCart");
+        await user.save();
+        res.sendStatus(200);
+    },
+
+    postSetItemVariation: async function (req, res) {
+        if (!req.session.loggedIn) {
+            return;
+        }
+
+        const user = await Member.findOne({
+            username: req.session.username,
+        }).exec();
+
+        const index = req.body["index"];
+        const variant = req.body["variant"];
+
+        user.shoppingCart[index].variant = variant;
+        user.markModified("shoppingCart");
+        await user.save();
+        res.sendStatus(200);
+    },
+
+    postSetItemInclusion: async function (req, res) {
+        if (!req.session.loggedIn) {
+            return;
+        }
+
+        const user = await Member.findOne({
+            username: req.session.username,
+        }).exec();
+
+        const index = req.body["index"];
+        const includeItem = req.body["includeItem"];
+
+        user.shoppingCart[index].includeItem = includeItem;
         user.markModified("shoppingCart");
         await user.save();
         res.sendStatus(200);

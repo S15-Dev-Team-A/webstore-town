@@ -46,6 +46,8 @@ app.get("/mycart", cartController.getCart);
 app.post("/removeCartItem", cartController.postRemoveCartItem);
 app.post("/addCartItemQty", cartController.postAddCartItemQty);
 app.post("/minusCartItemQty", cartController.postMinusCartItemQty);
+app.post("/setItemVariation", cartController.postSetItemVariation);
+app.post("/setItemInclusion", cartController.postSetItemInclusion);
 
 // productlistController.js functions
 app.get("/productlist", productlistController.getproductlistPage);

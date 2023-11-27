@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     addRemoveItemBtnListeners();
     addAddItemQtyListeners();
     addMinusItemQtyListeners();
+    addVariationDropdownListeners();
+    addIncludeItemListeners();
 });
 
 const addRemoveItemBtnListeners = function () {
@@ -75,6 +77,60 @@ const addMinusItemQtyListeners = function () {
             if (response.status == 200) {
                 window.location.reload();
             }
+        });
+    }
+};
+
+const addVariationDropdownListeners = function () {
+    const itemVariantDropdowns = document.querySelectorAll("#item-variant");
+    for (const itemVariantDropdown of itemVariantDropdowns) {
+        itemVariantDropdown.addEventListener("change", async function () {
+            const index = itemVariantDropdown.parentElement.parentElement
+                .querySelector(".item-id")
+                .innerText.split("-")[0];
+            const variant = itemVariantDropdown.value;
+
+            const response = await fetch("/setItemVariation", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    index: index,
+                    variant: variant,
+                }),
+            });
+
+            // if (response.status == 200) {
+            //     window.location.reload();
+            // }
+        });
+    }
+};
+
+const addIncludeItemListeners = function () {
+    const includeItemCheckboxes = document.querySelectorAll(".include-checkbox");
+    for (const includeItemCheckbox of includeItemCheckboxes) {
+        includeItemCheckbox.addEventListener("change", async function () {
+            const index = includeItemCheckbox.parentElement.parentElement
+                .querySelector(".item-id")
+                .innerText.split("-")[0];
+            const includeItem = includeItemCheckbox.checked;
+
+            const response = await fetch("/setItemInclusion", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    index: index,
+                    includeItem: includeItem
+                }),
+            });
+
+            // if (response.status == 200) {
+            //     window.location.reload();
+            // }
         });
     }
 };
