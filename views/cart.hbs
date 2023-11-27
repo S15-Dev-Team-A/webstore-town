@@ -31,117 +31,19 @@
             <div>Actions</div>
         </div>
 
-        <div class="cart-item">
-            <div class="item-id" hidden></div>
-
-            <div class="include-item">
-                <input type="checkbox">
-            </div>
-
-            <div class="item-image">
-                <img src="/images/sample_products/sofachair.png"></img>
-            </div>
-
-            <div class="item-description">
-                <div class="item-name">Sofa</div>
-                <div class="item-merchant">by IKEA</div>
-                <div class="description-text">A perfect blend of comfort and Scandinavian design, effortlessly enhancing
-                    any living space.</div>
-            </div>
-
-            <div class="item-variation">
-                <select id="item-variant">
-                    <option value="Default">Default</option>
-                    <option value="Ergonomic">Ergonomic</option>
-                </select>
-            </div>
-
-            <div class="item-unit-price">
-                {{!--
-                Default price - item price when no discount
-                Old price - undiscounted item price when there's a discount
-                New price - discounted item price when there's a discount
-                --}}
-                <div class="default-unit-price">PHP 750</div>
-                <div class="old-unit-price" hidden>PHP 1,450,000</div>
-                <div class="new-unit-price" hidden>PHP 1,350,000</div>
-            </div>
-
-            <div class="item-qty">
-                <button class="minus-btn"></button>
-                <input type="number" id="item-quantity" value=1>
-                <button class="add-btn"></button>
-            </div>
-
-            <div class="item-total-price">
-                <div class="total-price">PHP 750</div>
-            </div>
-
-            <div class="item-buttons">
-                <button class="remove-btn"></button>
-            </div>
-        </div>
-
-        <div class="cart-item">
-            <div class="item-id" hidden></div>
-
-            <div class="include-item">
-                <input type="checkbox">
-            </div>
-
-            <div class="item-image">
-                <img src="/images/sample_products/airmax.png"></img>
-            </div>
-
-            <div class="item-description">
-                <div class="item-name">AirMax</div>
-                <div class="item-merchant">by Nike</div>
-                <div class="description-text">Nike's Air Max shoes are iconic athletic footwear known for their
-                    innovative design featuring visible air cushioning units.</div>
-            </div>
-
-            <div class="item-variation">
-                <select id="item-variant">
-                    <option value="Default">Default</option>
-                    <option value="Ergonomic">Ergonomic</option>
-                </select>
-            </div>
-
-            <div class="item-unit-price">
-                {{!--
-                Default price - item price when no discount
-                Old price - undiscounted item price when there's a discount
-                New price - discounted item price when there's a discount
-                --}}
-                <div class="default-unit-price" hidden>PHP 1,750,000</div>
-                <div class="old-unit-price">PHP 1,450,000</div>
-                <div class="new-unit-price">PHP 1,350,000</div>
-            </div>
-
-            <div class="item-qty">
-                <button class="minus-btn"></button>
-                <input type="number" id="item-quantity" value=1>
-                <button class="add-btn"></button>
-            </div>
-
-            <div class="item-total-price">
-                <div class="total-price">PHP 1,350,000</div>
-            </div>
-
-            <div class="item-buttons">
-                <button class="remove-btn"></button>
-            </div>
-        </div>
+        {{#each cartItems }}
+        {{> cartitem this }}
+        {{/each}}
 
         <div class="cart-footer cart-footer-1">
             <div class="select-all">Select All</div>
             <div class="subtotal-text">Subtotal</div>
-            <div class="subtotal">PHP 1,350,750</div>
+            <div class="subtotal">PHP {{subtotal}} </div>
         </div>
 
         <div class="cart-footer cart-footer-1">
             <div class="points-gained-text">Points Gained</div>
-            <div class="points">1,350,750</div>
+            <div class="points"> {{points}} </div>
             <div class="check-out-text">
                 <button>Check Out</button>
             </div>

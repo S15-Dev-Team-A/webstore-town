@@ -20,6 +20,9 @@ const host = '0.0.0.0';
 const app = express();
 app.set('view engine', 'hbs');                                  // sets `hbs` as view engine                    
 hbs.registerPartials(__dirname + '/views/partials');            // sets `/views/partials` as folder containing partial hbs files
+hbs.registerHelper('ifEquals', function(arg1, arg2, options) {
+    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
 app.use(express.urlencoded({limit: '50mb', extended: true}));   // parses incoming requests with urlencoded payloads
 app.use(express.static('public'));                              // set the folder `public` as folder containing static assets such as css, js, and image files
 

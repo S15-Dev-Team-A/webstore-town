@@ -1,0 +1,61 @@
+<div class="cart-item">
+    <div class="item-id" hidden> {{ productID }} </div>
+
+    <div class="include-item">
+        {{#if includeItem}}
+        <input class="include-checkbox" type="checkbox" checked>
+        {{else}}
+        <input class="include-checkbox" type="checkbox">
+        {{/if}}
+    </div>
+
+    <div class="item-image">
+        <img src="data:image/png;base64,{{ itemImageBuffer }}"></img>
+    </div>
+
+    <div class="item-description">
+        <div class="item-name">{{ itemName }}</div>
+        <div class="item-merchant">by {{ itemMerchant }}</div>
+        <div class="description-text">{{ itemDescription }}</div>
+    </div>
+
+    <div class="item-variation">
+        <select id="item-variant">
+            {{#each itemVariants}}
+                {{#ifEquals this ../itemSelectedVariant}}
+                <option value="{{this}}" selected>{{this}}</option>
+                {{else}}
+                <option value="{{this}}">{{this}}</option>
+                {{/ifEquals}}
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="item-unit-price">
+        {{!--
+        Default price - item price when no discount
+        Old price - undiscounted item price when there's a discount
+        New price - discounted item price when there's a discount
+        --}}
+        {{#ifEquals itemDiscountedPrice -1}}
+        <div class="default-unit-price">PHP {{ itemDefaultPrice }}</div>
+        {{else}}
+        <div class="old-unit-price">PHP {{ itemNonDiscountedPrice }}</div>
+        <div class="new-unit-price">PHP {{ itemDiscountedPrice }}</div>
+        {{/ifEquals}}
+    </div>
+
+    <div class="item-qty">
+        <button class="minus-btn"></button>
+        <input type="number" id="item-quantity" value={{ itemQuantity }}>
+        <button class="add-btn"></button>
+    </div>
+
+    <div class="item-total-price">
+        <div class="total-price">PHP {{ itemTotalPrice }}</div>
+    </div>
+
+    <div class="item-buttons">
+        <button class="remove-btn"></button>
+    </div>
+</div>
