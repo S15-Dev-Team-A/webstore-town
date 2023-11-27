@@ -23,6 +23,9 @@ hbs.registerPartials(__dirname + '/views/partials');            // sets `/views/
 hbs.registerHelper('ifEquals', function(arg1, arg2, options) {
     return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
 });
+hbs.registerHelper('toLocaleString', function(number) {
+    return number.toLocaleString()
+});
 app.use(express.urlencoded({limit: '50mb', extended: true}));   // parses incoming requests with urlencoded payloads
 app.use(express.static('public'));                              // set the folder `public` as folder containing static assets such as css, js, and image files
 

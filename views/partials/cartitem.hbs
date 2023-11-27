@@ -38,10 +38,10 @@
         New price - discounted item price when there's a discount
         --}}
         {{#ifEquals itemDiscountedPrice -1}}
-        <div class="default-unit-price">PHP {{ itemDefaultPrice }}</div>
+        <div class="default-unit-price">PHP {{toLocaleString itemDefaultPrice}}</div>
         {{else}}
-        <div class="old-unit-price">PHP {{ itemNonDiscountedPrice }}</div>
-        <div class="new-unit-price">PHP {{ itemDiscountedPrice }}</div>
+        <div class="old-unit-price">PHP {{toLocaleString itemNonDiscountedPrice}}</div>
+        <div class="new-unit-price">PHP {{toLocaleString itemDiscountedPrice}}</div>
         {{/ifEquals}}
     </div>
 
@@ -52,7 +52,7 @@
     </div>
 
     <div class="item-total-price">
-        <div class="total-price">PHP {{ itemTotalPrice }}</div>
+        <div class="total-price">PHP {{toLocaleString itemTotalPrice}}</div>
     </div>
 
     <div class="item-buttons">
