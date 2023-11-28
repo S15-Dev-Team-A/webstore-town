@@ -162,13 +162,14 @@ async function populate() {
         productID: "00000001",
         productName: "Parcel Pushchair",
         description: "Anywhere, anytime and any mood, parcel™ is always travel ready with an easily activated compact fold.",
-        cost: 0,
+        cost: 24999,
         variations: ["Oyster", "Eclipse", "Pine", "Carbon"],
         merchantBrand: "Joie Signature",
         productPicture: {
             data: 1,
             contentType: "",
         },
+        discount: .10
     };
     productNew.productPicture.data = fs.readFileSync(
         "./public/images/products/00000001.png"

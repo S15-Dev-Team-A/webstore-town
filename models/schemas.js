@@ -72,7 +72,7 @@ var productSchema = new mongoose.Schema({    // defines the schema / model for p
         data: Buffer,
         contentType: String,
     },
-    discount:{                           // Determines the discount of the product, if any
+    discount:{                           // Determines the discount of the product (in decimal), if any
         type: Number,
     },
     sponsoredBy :{                           // Array of all affiliates (represented by their usernames) associated with the product
