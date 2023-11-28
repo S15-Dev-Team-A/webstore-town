@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addMinusItemQtyListeners();
     addVariationDropdownListeners();
     addIncludeItemListeners();
+    addSelectAllBtnListener();
 });
 
 const addRemoveItemBtnListeners = function () {
@@ -109,7 +110,8 @@ const addVariationDropdownListeners = function () {
 };
 
 const addIncludeItemListeners = function () {
-    const includeItemCheckboxes = document.querySelectorAll(".include-checkbox");
+    const includeItemCheckboxes =
+        document.querySelectorAll(".include-checkbox");
     for (const includeItemCheckbox of includeItemCheckboxes) {
         includeItemCheckbox.addEventListener("change", async function () {
             const index = includeItemCheckbox.parentElement.parentElement
@@ -124,7 +126,7 @@ const addIncludeItemListeners = function () {
                 },
                 body: JSON.stringify({
                     index: index,
-                    includeItem: includeItem
+                    includeItem: includeItem,
                 }),
             });
 
@@ -133,4 +135,32 @@ const addIncludeItemListeners = function () {
             // }
         });
     }
+};
+
+const addSelectAllBtnListener = async function () {
+    const selectAllBtn = document.querySelector(".select-all");
+    const includeItemCheckboxes =
+        document.querySelectorAll(".include-checkbox");
+
+    // set all checkboxes to checked
+    selectAllBtn.addEventListener("click", function () {
+        for (const includeItemCheckbox of includeItemCheckboxes) {
+            includeItemCheckbox.checked = true;
+        }
+    });
+
+    // set all items to be included in user's shopping cart
+    const response = await fetch("/setAllItemInclusion", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            includeItem: true,
+        }),
+    });
+
+    // if (response.status == 200) {
+    //     window.location.reload();
+    // }
 };

@@ -111,6 +111,25 @@ const cartController = {
         await user.save();
         res.sendStatus(200);
     },
+
+    postSetAllItemInclusion: async function (req, res) {
+        if (!req.session.loggedIn) {
+            return;
+        }
+
+        const user = await Member.findOne({
+            username: req.session.username
+        }).exec();
+
+        const includeItem = req.body["includeItem"];
+        const len = user.shoppingCart.length;
+        for (let i = 0; i < len; i++) {
+            user.shoppingCart[i].includeItem = includeItem;
+        }
+        user.markModified("shoppingCart");
+        await user.save();
+        res.sendStatus(200);
+    }
 };
 
 const getCartItems = async function (username) {

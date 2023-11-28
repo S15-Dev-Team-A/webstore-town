@@ -151,6 +151,10 @@ body {
     font-weight: bold;
 }
 
+.select-all {
+    cursor: pointer;
+}
+
 .subtotal {
     grid-column: 7;
     font-weight: bold;
