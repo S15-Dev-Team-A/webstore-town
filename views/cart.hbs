@@ -31,11 +31,11 @@
             <div>Total</div>
             <div>Actions</div>
         </div>
-        
+
         {{#each cartItems }}
-            {{> cartitem this index=@index}}
+        {{> cartitem this index=@index}}
         {{else}}
-            <p class="no-cart-items-text">You have no items in your cart.</p>
+        <p class="no-cart-items-text">You have no items in your cart.</p>
         {{/each}}
 
         <div class="cart-footer cart-footer-1">
@@ -55,7 +55,7 @@
                 {{/if}}
             </div>
         </div>
-    </p#>
+    </div>
 </body>
 
 </html>
