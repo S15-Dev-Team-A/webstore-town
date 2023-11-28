@@ -1,5 +1,9 @@
 const { Member, Product } = require("../models/schemas");
 
+const roundToTwo = function (num) {
+    return +(Math.round(num + "e+2") + "e-2");
+};
+
 /*
     defines an object which contains functions executed as callback
     when a client requests for `index` paths in the server
@@ -20,8 +24,8 @@ const cartController = {
 
         res.render("cart", {
             cartItems: cartItems,
-            subtotal: subtotal,
-            points: points,
+            subtotal: roundToTwo(subtotal),
+            points: roundToTwo(points),
         });
     },
 
@@ -48,8 +52,8 @@ const cartController = {
 
         res.render("checkout", {
             checkoutItems: checkoutItems,
-            subtotal: subtotal,
-            points: points,
+            subtotal: roundToTwo(subtotal),
+            points: roundToTwo(points),
         });
     },
 
@@ -190,16 +194,18 @@ const getCartItems = async function (username) {
             itemDefaultPrice: product.cost,
             itemNonDiscountedPrice: product.cost,
             itemDiscountedPrice: product.discount
-                ? product.cost - product.cost * product.discount
+                ? roundToTwo(product.cost - product.cost * product.discount)
                 : -1,
             itemQuantity: item.quantity,
             itemTotalPrice: product.discount
-                ? (product.cost - product.cost * product.discount) *
-                  item.quantity
-                : product.cost * item.quantity,
+                ? roundToTwo(
+                      (product.cost - product.cost * product.discount) *
+                          item.quantity
+                  )
+                : roundToTwo(product.cost * item.quantity),
         };
 
-        subtotal += cartItem.itemTotalPrice;
+        subtotal += roundToTwo(cartItem.itemTotalPrice);
         cartItems.push(cartItem);
     }
 
@@ -236,16 +242,18 @@ const getCheckoutItems = async function (username) {
             itemSelectedVariant: item.variant,
             itemDescription: product.description,
             itemUnitPrice: product.discount
-                ? product.cost - product.cost * product.discount
-                : product.cost,
+                ? roundToTwo(product.cost - product.cost * product.discount)
+                : roundToTwo(product.cost),
             itemQuantity: item.quantity,
             itemTotalPrice: product.discount
-                ? (product.cost - product.cost * product.discount) *
-                  item.quantity
-                : product.cost * item.quantity,
+                ? roundToTwo(
+                      (product.cost - product.cost * product.discount) *
+                          item.quantity
+                  )
+                : roundToTwo(product.cost * item.quantity),
         };
 
-        subtotal += checkoutItem.itemTotalPrice;
+        subtotal += roundToTwo(checkoutItem.itemTotalPrice);
         checkoutItems.push(checkoutItem);
     }
 
