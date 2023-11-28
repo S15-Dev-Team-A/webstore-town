@@ -83,7 +83,7 @@ const addMinusItemQtyListeners = function () {
 };
 
 const addVariationDropdownListeners = function () {
-    const itemVariantDropdowns = document.querySelectorAll("#item-variant");
+    const itemVariantDropdowns = document.querySelectorAll(".item-variant");
     for (const itemVariantDropdown of itemVariantDropdowns) {
         itemVariantDropdown.addEventListener("change", async function () {
             const index = itemVariantDropdown.parentElement.parentElement
