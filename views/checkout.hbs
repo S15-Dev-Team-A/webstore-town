@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/images.css">
+    <link rel="stylesheet" type="text/css" href="/css/hover.css">
+    <link rel="stylesheet" type="text/css" href="/css/checkout.css">
+    <link rel="icon" href="/images/logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/js/checkout_scripts.js"></script>
+    <title>WebTown | Checkout</title>
+</head>
+
+<body>
+    {{> navbar topmargin=-50 backgroundcolor="black"}}
+    <div class="header">
+        <p class="header-text">Checkout</p>
+    </div>
+
+    <div class="checkout-container">
+        {{#each checkoutItems}}
+        {{> checkoutitem this}}
+        {{/each}}
+
+        <div class="checkout-footer checkout-footer-1">
+            <div class="subtotal-text">Subtotal</div>
+            <div class="subtotal">PHP {{toLocaleString subtotal}} </div>
+        </div>
+
+        <div class="checkout-footer checkout-footer-1">
+            <div class="points-gained-text">Points Gained</div>
+            <div class="points"> {{ points }} </div>
+        </div>
+    </div>
+</body>
+
+</html>

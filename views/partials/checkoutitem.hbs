@@ -1,0 +1,20 @@
+<div class="checkout-item">
+    <div class="item-image">
+        <img src="data:image/png;base64,{{ itemImageBuffer }}"></img>
+    </div>
+
+    <div class="item-details">
+        <div class="item-name">{{ itemName }}</div>
+        <div class="item-merchant">by {{ itemMerchant }}</div>
+        <div class="item-variation">Variation: {{ itemSelectedVariant }}</div>
+        <div class="description-text">{{ itemDescription}}</div>
+        <div class="item-unit-price-qty">
+            <div class="item-price">PHP {{toLocaleString itemUnitPrice}}</div>
+            <div class="item-qty">x{{ itemQuantity }}</div>
+        </div>
+    </div>
+
+    <div class="item-total-price">
+        <div class="total-price">PHP {{toLocaleString itemTotalPrice}}</div>
+    </div>
+</div>

@@ -44,15 +44,11 @@
             <div class="subtotal">PHP {{toLocaleString subtotal}} </div>
         </div>
 
-        <div class="cart-footer cart-footer-1">
+        <div class="cart-footer cart-footer-2">
             <div class="points-gained-text">Points Gained</div>
             <div class="points"> {{toLocaleString points}} </div>
             <div class="check-out-text">
-                {{#if cartItems}}
-                <button>Check Out</button>
-                {{else}}
-                <button disabled>Check Out</button>
-                {{/if}}
+                <a class="button" href="/checkout">Check Out</a>
             </div>
         </div>
     </div>

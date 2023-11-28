@@ -49,6 +49,7 @@ app.post("/minusCartItemQty", cartController.postMinusCartItemQty);
 app.post("/setItemVariation", cartController.postSetItemVariation);
 app.post("/setItemInclusion", cartController.postSetItemInclusion);
 app.post("/setAllItemInclusion", cartController.postSetAllItemInclusion);
+app.get("/checkout", cartController.getCheckout);
 
 // productlistController.js functions
 app.get("/productlist", productlistController.getproductlistPage);

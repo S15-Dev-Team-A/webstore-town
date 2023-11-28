@@ -170,7 +170,8 @@ body {
     font-weight: bold;
 }
 
-.check-out-text button {
+.check-out-text .button {
+    color: white;
     border-radius: 8px;
     font-size: medium;
     background-color: #04aa6d;
