@@ -51,6 +51,14 @@ body {
     padding: 25px;
 }
 
+.checkbox-empty {
+    background: url(/images/checkbox_empty.png) center;
+}
+
+.checkbox-checked {
+    background: url(/images/checkbox_checked.png) center;
+}
+
 .item-image img {
     width: 125px;
 }
@@ -178,4 +186,10 @@ body {
     border: none;
     padding: 15px 20px;
     text-align: center;
+}
+
+.checkbox-empty,
+.checkbox-checked {
+    width: 25px;
+    height: 25px;
 }

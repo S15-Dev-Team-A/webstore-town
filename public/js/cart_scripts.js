@@ -110,14 +110,23 @@ const addVariationDropdownListeners = function () {
 };
 
 const addIncludeItemListeners = function () {
-    const includeItemCheckboxes =
-        document.querySelectorAll(".include-checkbox");
+    const includeItemCheckboxes = document.querySelectorAll(".checkbox-custom");
     for (const includeItemCheckbox of includeItemCheckboxes) {
-        includeItemCheckbox.addEventListener("change", async function () {
+        includeItemCheckbox.addEventListener("click", async function () {
             const index = includeItemCheckbox.parentElement.parentElement
                 .querySelector(".item-id")
                 .innerText.split("-")[0];
-            const includeItem = includeItemCheckbox.checked;
+            const includeItem =
+                !includeItemCheckbox.classList.contains("checkbox-checked");
+
+            // update checkbox appearance
+            if (includeItemCheckbox.classList.contains("checkbox-checked")) {
+                includeItemCheckbox.classList.remove("checkbox-checked");
+                includeItemCheckbox.classList.add("checkbox-empty");
+            } else {
+                includeItemCheckbox.classList.remove("checkbox-empty");
+                includeItemCheckbox.classList.add("checkbox-checked");
+            }
 
             const response = await fetch("/setItemInclusion", {
                 method: "POST",
@@ -139,28 +148,31 @@ const addIncludeItemListeners = function () {
 
 const addSelectAllBtnListener = async function () {
     const selectAllBtn = document.querySelector(".select-all");
-    const includeItemCheckboxes =
-        document.querySelectorAll(".include-checkbox");
+    const includeItemCheckboxes = document.querySelectorAll(".checkbox-custom");
 
     // set all checkboxes to checked
-    selectAllBtn.addEventListener("click", function () {
+    selectAllBtn.addEventListener("click", async function () {
         for (const includeItemCheckbox of includeItemCheckboxes) {
-            includeItemCheckbox.checked = true;
+            // update checkboxes appearance
+            if (!includeItemCheckbox.classList.contains("checkbox-checked")) {
+                includeItemCheckbox.classList.add("checkbox-checked");
+            }
+            includeItemCheckbox.classList.remove("checkbox-empty");
         }
-    });
 
-    // set all items to be included in user's shopping cart
-    const response = await fetch("/setAllItemInclusion", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            includeItem: true,
-        }),
-    });
+        // set all items to be included in user's shopping cart
+        const response = await fetch("/setAllItemInclusion", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                includeItem: true,
+            }),
+        });
 
-    // if (response.status == 200) {
-    //     window.location.reload();
-    // }
+        // if (response.status == 200) {
+        //     window.location.reload();
+        // }
+    });
 };

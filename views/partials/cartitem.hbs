@@ -3,9 +3,9 @@
 
     <div class="include-item">
         {{#if includeItem}}
-        <input class="include-checkbox" type="checkbox" checked>
+        <button class="checkbox-custom checkbox-checked"></button>
         {{else}}
-        <input class="include-checkbox" type="checkbox">
+        <button class="checkbox-custom checkbox-empty"></button>
         {{/if}}
     </div>
 
@@ -22,11 +22,11 @@
     <div class="item-variation">
         <select class="item-variant">
             {{#each itemVariants}}
-                {{#ifEquals this ../itemSelectedVariant}}
-                <option value="{{this}}" selected>{{this}}</option>
-                {{else}}
-                <option value="{{this}}">{{this}}</option>
-                {{/ifEquals}}
+            {{#ifEquals this ../itemSelectedVariant}}
+            <option value="{{this}}" selected>{{this}}</option>
+            {{else}}
+            <option value="{{this}}">{{this}}</option>
+            {{/ifEquals}}
             {{/each}}
         </select>
     </div>
