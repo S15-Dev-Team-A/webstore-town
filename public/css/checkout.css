@@ -13,11 +13,25 @@ body {
     text-transform: uppercase;
 }
 
+.order-summary,
+.payment-section {
+    text-align: center;
+}
+
+.order-summary-text,
+.payment-section-text {
+    color: #a0a0a0;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 .checkout-container {
     box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     width: fit-content;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 .checkout-item,
@@ -102,11 +116,49 @@ body {
     font-weight: bold;
 }
 
-/* .checkout-button {
-    border-radius: 8px;
-    font-size: medium;
-    background-color: #04aa6d;
+.payment-section {
+    width: fit-content;
+    margin: auto;
+}
+
+.payment-tab {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+}
+
+.tablink {
+    color: black;
+    background-color: white;
     border: none;
-    padding: 15px 20px;
-    text-align: center;
-} */
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tablink:hover {
+    background-color: #ddd;
+}
+
+.tablink-active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 8px 16px;
+}
+
+.tabcontent-inactive {
+    display: none;
+}
+
+.tabcontent-active {
+    display: block;
+}
+
+.tabcontent img {
+    width: 50%;
+}

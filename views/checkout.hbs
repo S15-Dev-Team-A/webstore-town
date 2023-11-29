@@ -20,6 +20,10 @@
         <p class="header-text">Checkout</p>
     </div>
 
+    <div class="order-summary">
+        <div class="order-summary-text">Order Summary</div>
+    </div>
+
     <div class="checkout-container">
         {{#each checkoutItems}}
         {{> checkoutitem this}}
@@ -33,6 +37,24 @@
         <div class="checkout-footer checkout-footer-1">
             <div class="points-gained-text">Points Gained</div>
             <div class="points"> {{ points }} </div>
+        </div>
+    </div>
+
+    <div class="payment-section">
+        <div class="payment-section-text">Payment</div>
+
+        <div class="payment-tab">
+            <button name="payment-gcash" class="tablink tablink-active">GCash</button>
+            <button name="payment-maya" class="tablink">Maya</button>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabcontent tabcontent-active" id="payment-gcash">
+            <img src="/images/payment/gcash.png">
+        </div>
+
+        <div class="tabcontent tabcontent-inactive" id="payment-maya">
+            <img src="/images/payment/maya.png">
         </div>
     </div>
 </body>
