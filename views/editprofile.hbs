@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/images/logo.png">
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    
+	<title>Kahit Ano | Edit Profile</title>
+</head>
+  <body style="background-color: #ffffff;">
+    {{> navbar topmargin=-30 backgroundcolor="black" z-index="100"}}
+
+    <div style="text-align:center">
+        <p
+            style="color:black;padding-left: 110px; margin-top: 30px; margin-bottom:10px; font-size:50px; font-weight:700;">
+            EDIT PROFILE
+        </p>
+    </div>
+
+
+    <div class="hori" style="justify-content: center; padding-top: 20px; padding-left:110px;">
+        <div class="vert block">
+            <form id="edit_bio">
+                <label style="text-shadow: 0 0 0px #000000; color:black; margin-top: 5px; margin-bottom:-10px; font-size:20px; font-weight:700;" for="username">Change Display Name</label>
+                                <br>
+                <input style="margin-bottom:20px; height: 15px; width:100%;" type="text" id="username" name="username">
+                <br>
+
+                <label style="text-shadow: 0 0 0px #000000;  color:black; margin-top: 5px; margin-bottom:-10px; font-size:20px; font-weight:700;" for="newpw">Change Password</label>
+                
+                <p style="text-shadow: 0 0 0px #383838;  color:rgb(114, 114, 114); margin-top: 5px; margin-bottom:-10px; font-size:15px; font-weight:400;">
+                    Must be at least 8 characters long. <br> It should contain at least one of each: <br> uppercase,
+                            lowercase, numbers, and  <br>symbols (#?!@$%^&*-._).
+                </p>
+                
+                                <br>
+                <input style="text-shadow: 0 0 0px #000000;  color:black; margin-top: 5px; margin-bottom:20px; font-size:20px; font-weight:700;" type="password" id="newpw" name="newpw">
+                                <br>
+                                
+                                <label style="text-shadow: 0 0 0px #000000; color:black; margin-top: 5px; margin-bottom:-10px; font-size:20px; font-weight:700;" for="pic">Change Profile Picture</label>
+                                         <br>
+                                          <input style="margin-bottom:20px; " type="file" id="pic" name="pic" accept="image/*">  
+
+                                          <br>
+                <label style="text-shadow: 0 0 0px #000000;  color:black; margin-top: 5px; margin-bottom:-10px; font-size:15px; font-weight:400;" for="bio">Please type in your current/old <br> password to confirm changes made.</label>
+                                <br>
+                <input style="text-shadow: 0 0 0px #000000;  color:black; margin-top: 5px; margin-bottom:20px; font-size:20px; font-weight:700;" type="password" id="pw" name="pw">
+                <br>
+
+                <br>
+                <button type="submit" form="edit_bio" value="Submit" id="form_submit">Apply Changes</button>
+            </form>
+        </div>
+
+        
+        
+    </div>
+
+    <div class="hori" style="justify-content: center; padding-top: 20px; display: flex;">
+        <p id="error"></p>
+    </div>
+
+
+    <script src="/js/profile.js"></script>
+</body>
+</html>

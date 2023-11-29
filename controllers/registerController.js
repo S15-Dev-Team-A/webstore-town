@@ -1,4 +1,5 @@
 const bcrypt = require("bcrypt");
+const fs = require('fs');
 
 const { Member } = require("../models/schemas");
 
@@ -55,6 +56,12 @@ const registerController = {
                 pw: hash,
                 displayName: req.body["name"],
                 accountType: req.body["accountType"],
+                dp:{
+                    data: fs.readFileSync('./public/images/profile_icon.jpg'),
+                    contentType: 'image/jpg',
+                },
+                points:0,
+                
             }).save();
 
             req.session.loggedIn = true;

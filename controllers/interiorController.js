@@ -41,7 +41,7 @@ const interiorController = {
         result.imgBuffer = result.productPicture.data.toString("base64");
         output = `
         <div style="    margin-top:0px;
-        height:420px;
+        height:auto;
         border-radius: 15px;
         background-color: #ffffff;
         border: 2px solid black;
@@ -60,12 +60,12 @@ const interiorController = {
                         <p style="color:black; margin-top: 10px; margin-bottom:-10px;">by ${
                             result.merchantBrand
                         } </p>
-                        <p style="color:black; margin-top: 20px; margin-bottom:20px; font-size:20px; font-weight:450;">${
+                        <p style="color:red; margin-top: 12px; margin-bottom:20px; font-size:18px; font-weight:600;">${
                             result.cost
                         } PHP </p>
-                        <p style="color:black; margin-top: -20px; margin-bottom:20px; font-size:20px; font-weight:450;">Has ${
-                            result.variations.length
-                        } variations</p>
+                        <p style="color:black; margin-top: -10px; margin-bottom:20px; font-size:17px; font-weight:400;">${
+                            result.description
+                        } </p>
                     
                 </div>
 

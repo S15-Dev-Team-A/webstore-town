@@ -31,4 +31,24 @@ $(document).ready(function(){
                 }
             });
     });
+
+    $(".product_tab").click(function(){
+        // window.location="/login"
+            $.get('/clickProduct', {prodid:$(this).attr('prodid')}, function(loggedin){
+
+                if(loggedin){
+                     $(".mycart").append(
+
+                        '<p class="fade" style="text-align:center; border-radius:10px; padding:10px; margin-top:-105px; background-color:green;">Item added to Cart!</p>'
+                        
+                        );
+                    $('.fade').delay(4000).fadeOut(2000, function() {
+                        $(this).remove();
+                    });
+                } else {
+                    alert("Please log in an account to start adding items to your Cart!")
+                    window.location="/login"
+                }
+            });
+    });
 });

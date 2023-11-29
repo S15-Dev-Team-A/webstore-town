@@ -102,7 +102,12 @@ var houseSchema = new mongoose.Schema({    // defines the schema / model for eac
     housePicture: {                                   // Picture of the house
         data: Buffer,
         contentType: String,
-    }
+    },
+    pointCost: {                                   // Picture of the house
+        type: Number,
+        required:true
+    },
+
 });
 
 

@@ -7,7 +7,7 @@
 
             {{#if session.loggedIn}}
             <div class="navbarText">
-                <a href="/profile">My Profile</a>
+                <a href="/profile?id={{session.username}}">My Profile</a>
             </div>
             {{/if}}
 

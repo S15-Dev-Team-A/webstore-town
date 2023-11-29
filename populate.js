@@ -50,6 +50,7 @@ async function populate() {
             data: 1,
             contentType: "",
         },
+        pointCost: 5000,
     };
 
     houseNew.housePicture.data = fs.readFileSync(
@@ -61,100 +62,6 @@ async function populate() {
 
     // Adding 5 additional sample affiliates
 
-    //Sample Affiliate 1
-    var memberNew = {
-        username: "zeus",
-        pw: "$2b$10$DPnW9o5k1LvJhk3wQLfnOOydKDfxhetITvW4ucbK.EdsQn47WfFaa",
-        displayName: "Zeus",
-        accountType: "Affiliate",
-        dp: {
-            data: 1,
-            contentType: "",
-        },
-    };
-
-    memberNew.dp.data = fs.readFileSync(
-        "./public/images/sample_users/zeus.jpg"
-    );
-    memberNew.dp.contentType = "image/jpg";
-
-    await db.insertOne(Member, memberNew);
-
-    //Sample Affiliate 2
-    var memberNew = {
-        username: "oner",
-        pw: "$2b$10$a8h25tmviPX4FLDy80Du5uBPGrNBMonuJgvvYbcw9YlNPIrXdja1a",
-        displayName: "Oner",
-        accountType: "Affiliate",
-        dp: {
-            data: 1,
-            contentType: "",
-        },
-    };
-
-    memberNew.dp.data = fs.readFileSync(
-        "./public/images/sample_users/oner.jpeg"
-    );
-    memberNew.dp.contentType = "image/jpeg";
-
-    await db.insertOne(Member, memberNew);
-
-    //Sample Affiliate 3
-    var memberNew = {
-        username: "faker",
-        pw: "$2b$10$MSlWoFwON56StF3UHA1lBen7qqIAs8Ba3vxWmcRlKWAmjYRc1RivK",
-        displayName: "Faker",
-        accountType: "Affiliate",
-        dp: {
-            data: 1,
-            contentType: "",
-        },
-    };
-
-    memberNew.dp.data = fs.readFileSync(
-        "./public/images/sample_users/faker.jpg"
-    );
-    memberNew.dp.contentType = "image/jpg";
-
-    await db.insertOne(Member, memberNew);
-
-    //Sample Affiliate 4
-    var memberNew = {
-        username: "gumayusi",
-        pw: "$2b$10$cfb7hK6CV6jsm480sb1ycu0EsTQ9CIjEiWcOnpmtpxVKGCLlsMpuS",
-        displayName: "Gumayusi",
-        accountType: "Affiliate",
-        dp: {
-            data: 1,
-            contentType: "",
-        },
-    };
-
-    memberNew.dp.data = fs.readFileSync(
-        "./public/images/sample_users/guma.jpg"
-    );
-    memberNew.dp.contentType = "image/jpg";
-
-    await db.insertOne(Member, memberNew);
-
-    //Sample Affiliate 5
-    var memberNew = {
-        username: "keria",
-        pw: "$2b$10$bbIvvRR0vqZGT/KT6fqdT.vjNvNJwSGoa.z9GboWpt/vKKiiAjd4C",
-        displayName: "Keria",
-        accountType: "Affiliate",
-        dp: {
-            data: 1,
-            contentType: "",
-        },
-    };
-
-    memberNew.dp.data = fs.readFileSync(
-        "./public/images/sample_users/keria.jpg"
-    );
-    memberNew.dp.contentType = "image/jpg";
-
-    await db.insertOne(Member, memberNew);
 
     // Adding products
     

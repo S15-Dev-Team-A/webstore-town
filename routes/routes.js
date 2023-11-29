@@ -11,6 +11,8 @@ const interiorController = require("../controllers/interiorController.js");
 const productlistController = require("../controllers/productlistController.js");
 const cartController = require("../controllers/cartController.js");
 const houselistController = require("../controllers/houselistController.js");
+const profileController = require("../controllers/profileController.js");
+
 
 const app = express();
 
@@ -56,5 +58,11 @@ app.get("/productlist", productlistController.getproductlistPage);
 
 //houselistController.js functions
 app.get("/houselist", houselistController.gethouselistPage);
+
+//profileController.js functions
+app.get("/profile", profileController.getProfilePage);
+app.get("/editprofile", profileController.getEditProfile);
+app.post("/updateProfile", profileController.updateProfile);
+app.post("/checkPassword", profileController.checkPassword);
 
 module.exports = app;

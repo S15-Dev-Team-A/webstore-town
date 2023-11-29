@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/images.css">
+    <link rel="stylesheet" type="text/css" href="/css/hover.css">
+
+
+    <!-- fix link to css/image folders if not working -->
+    <link rel="icon" href="/images/logo.png">
+    <title>Webtown | {{user.username}}</title>
+  </head>
+
+  <body style="background-color: #ffffff;">
+    {{> navbar topmargin=-30 backgroundcolor="black" z-index="100"}}
+
+
+        
+
+    <div style="text-align:center">
+        <p
+            style="color:black;padding-left: 110px; margin-top: 30px; margin-bottom:30px; font-size:50px; font-weight:700;">
+            MY PROFILE
+        </p>
+    </div>
+
+    <div class="hori" style="margin-left:50px;">
+            <div class="hori" style="padding-top: 20px; flex-wrap:wrap; gap:4em; padding-left:250px;">
+        <div>
+            <div class="hori">
+                <div class="vert">
+                    <img src="data:{{user.imgType}};base64, {{user.imgBuffer}}" style="border-radius: 52px; " width="100">
+                </div>
+            </div>
+    <hr class="separator">
+        <div class="vert" style="justify-content: space-between;">
+                <p style="color:black; margin-top: 5px; margin-bottom:-10px; font-size:30px; font-weight:700;" class="ellipsis">{{user.displayName}} </p>
+                <p style="color:black; margin-top: 10px; margin-bottom:-10px;">@{{user.username}} </p>
+                <p style="color:black; margin-top: 20px; margin-bottom:20px; font-size:20px; font-weight:450;">Status: {{user.accountType}}</p>
+                {{#if user.isShopper}}
+                <p style="color:black; margin-top: -16px; margin-bottom:20px; font-size:18px; font-weight:400;">Available Points: {{user.points}}</p>
+                {{/if}}
+                <a href="/editprofile?id={{user.username}}"> <p style="text-align:center; padding:5px; background-color:black; color:rgb(255, 255, 255); margin-top: 20px; margin-bottom:20px; font-size:20px; font-weight:450;">EDIT PROFILE</p></a>
+                
+        </div>
+
+        </div>
+
+        {{#if user.isShopper}}
+        
+        <div class="vert" style="justify-content: ;">
+                <p style="color:black; margin-top: 5px; margin-bottom:-10px; font-size:30px; font-weight:700;" class="ellipsis">TRANSACTION HISTORY </p>
+                <p style="color:black; margin-top: 10px; margin-bottom:20px;">COMING SOON! </p>
+
+                
+        </div>
+        {{/if}}
+
+
+        {{#if user.isAffiliate}}
+        <div class="vert" style="justify-content: ;">
+                <p style="color:black; margin-top: 5px; margin-bottom:-10px; font-size:30px; font-weight:700;" class="ellipsis">SALES STATISTICS </p>
+                <p style="color:black; margin-top: 10px; margin-bottom:20px;">COMING SOON! </p>
+                <hr class="separator">
+                <p style="color:black; margin-top: 5px; margin-bottom:-10px; font-size:30px; font-weight:700;" class="ellipsis">PRODUCT REQUESTS </p>
+                <p style="color:black; margin-top: 10px; margin-bottom:20px;">COMING SOON! </p>
+                <p style="color:black; margin-top: 5px; margin-bottom:-10px; font-size:30px; font-weight:700;" class="ellipsis">CHANGE HOUSE LAYOUT </p>
+                <p style="color:black; margin-top: 10px; margin-bottom:20px;">COMING SOON! </p>
+
+        </div>
+        {{/if}}
+
+        {{#if user.isMerchant}}
+        <div class="vert" style="justify-content: ;">
+                <p style="color:black; margin-top: 5px; margin-bottom:-10px; font-size:30px; font-weight:700;" class="ellipsis">SALES STATISTICS </p>
+                <p style="color:black; margin-top: 10px; margin-bottom:20px;">COMING SOON! </p>
+                    <hr class="separator">
+                <p style="color:black; margin-top: 5px; margin-bottom:-10px; font-size:30px; font-weight:700;" class="ellipsis">REQUEST AN AFFILIATE </p>
+                <p style="color:black; margin-top: 10px; margin-bottom:20px;">COMING SOON! </p>
+        </div>
+        {{/if}}
+
+
+    </div>
+
+
+
+
+
+    </div>
+
+  
+
+    </div>
+
+        
+            {{> cartbutton backgroundcolor="black"}}
+
+
+  </body>
+
+</html>

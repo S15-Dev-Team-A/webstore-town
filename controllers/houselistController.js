@@ -32,6 +32,9 @@ const houselistController = {
             affiliate.houseIMGType = house.housePicture.contentType;
             affiliate.houseBuffer = house.housePicture.data.toString('base64');
 
+            affiliate.houseName = house.houseName;
+            affiliate.pointCost = house.pointCost;
+
             affiliate.dpIMGType = affiliate.dp.contentType;
             affiliate.dpBuffer = affiliate.dp.data.toString('base64');
         }
