@@ -33,7 +33,7 @@ $(document).ready(function(){
     });
 
     $(".product_tab").click(function(){
-        // window.location="/login"
+        // window.d:\1337-6969\Downloads\404157277_1269639973704002_1738228211988598110_n.pnglocation="/login"
             $.get('/clickProduct', {prodid:$(this).attr('prodid')}, function(loggedin){
 
                 if(loggedin){

@@ -36,6 +36,17 @@
     cursor: pointer;
 }
 
+.plus {
+    position: absolute;
+    width: 40px;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.plus:hover {
+    cursor: pointer;
+}
+
 .room1 {
     position: absolute;
     width: 500px;

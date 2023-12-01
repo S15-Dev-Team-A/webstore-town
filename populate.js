@@ -123,7 +123,7 @@ async function populate() {
     var productNew = {
         productID: "00000004",
         productName: "Tinted Sunscreen",
-        description: "Discover the perfect blend of skincare and sun protection with Blanc Pro's Tinted Sunscreen SPF30. Designed to address the undeniable effects of sun exposure, this innovative product is a must-have addition to your daily routine. Crafted with potent antioxidants, it not only fights signs of aging but also provides a robust shield against harmful UVA rays.",
+        description: "Designed to address the undeniable effects of sun exposure, this innovative product is a must-have addition to your daily routine.",
         cost: 399,
         variations: ["Default"],
         merchantBrand: "Blanc Pro",
@@ -177,7 +177,7 @@ async function populate() {
     var productNew = {
         productID: "00000007",
         productName: "Honey Bunny",
-        description: "As cuddly as a plush toy, this cute little rabbit is the perfect companion for the kids. A multi-functional digital player that is specially designed for children, the Honey Bunny can be used as early educational assistant (through the playback of stories, songs and poems) and a toy. Safe with no sharp edges, soft silicon ears and a drop-resistant body means this digital player can be directly handled by the children compared to other digital devices.",
+        description: "As cuddly as a plush toy, this cute little rabbit is the perfect companion for the kids. A multi-functional digital player that is specially designed for children, the Honey Bunny can be used as early educational assistant (through the playback of stories, songs and poems) and a toy.",
         cost: 2400,
         variations: ["Blue", "Pink", "Red"],
         merchantBrand: "Alilo",
