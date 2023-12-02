@@ -44,6 +44,8 @@ const loginController = {
 
             req.session.loggedIn = true;
             req.session.username = existingUsername.username;
+            req.session.dpType = existingUsername.dp.contentType;
+            req.session.dpBuffer = existingUsername.dp.data.toString('base64');
 
             res.redirect("/");
         } catch (e) {

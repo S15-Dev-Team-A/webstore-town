@@ -100,6 +100,8 @@ const profileController = {
 
             if (dp.data && dp.contentType){
                 result3 = await db.updateOne(Member,{'username': req.session.username},{dp: dp});
+                req.session.dpType = dp.contentType;
+                req.session.dpBuffer = dp.data.toString('base64');
             }
             
             res.send(result1.acknowledged || result2.acknowledged || result3.acknowledged);
