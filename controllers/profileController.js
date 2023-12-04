@@ -1,5 +1,4 @@
-const mongoose = require("mongoose");
-mongoose.connect('mongodb://127.0.0.1/Webtown-Testing');  // Connect to database
+const mongoose = require("mongoose");  // Connect to database
 const connection = mongoose.connection;             // Store database as a variable
 const db = require('../models/db.js');
 const {Member} = require('../models/schemas.js');

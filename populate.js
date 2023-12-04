@@ -18,9 +18,6 @@ async function populate() {
     await db.connect();
 
     // drop existing tables before inserting
-    Member.collection.drop();
-    Product.collection.drop();
-    House.collection.drop();
 
     // Adding KitKat as an affiliate
     var memberNew = {

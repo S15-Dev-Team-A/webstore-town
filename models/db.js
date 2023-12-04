@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const Member = require('./schemas.js');
 
 // Set database url
-const url = 'mongodb://127.0.0.1/Webtown-Testing';
+//const url = 'mongodb://127.0.0.1/Webtown-Testing';
+const url = 'mongodb+srv://public:yCyyhAXVfK5gi8uB@kahitanoforum.kf9utsb.mongodb.net/?retryWrites=true&w=majority';
 
 // additional connection options
 const options = {
